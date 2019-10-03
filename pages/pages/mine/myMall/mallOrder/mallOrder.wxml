@@ -1,0 +1,84 @@
+<!--pages/mine/myMall/mallOrder/mallOrder.wxml-->
+<view>
+  <view class='goods-cotainer'>
+    <!-- 菜单导航 -->
+    <view class="list-box">
+      <block wx:key="goodsList" wx:for="{{goodsList}}" wx:for-index="index">
+        <view class="goods-list" bindtap='goodsSelect' data-index='{{item.id}}'>
+          <view class="goods-list-title {{item.id==curIndex?'active':''}}">{{item.title}}</view>
+        </view>
+      </block>
+    </view>
+    <!-- 内容列表区块 -->
+    <view class='list-content'>
+      <!--全部 -->
+      <!-- <view> -->
+      <!-- wx:for="{{orderpays}}" -->
+      <block wx:key="orderpays" wx:for='{{allorder}}' wx:for-index="main">
+        <view class='only' bindtap='godetail' data-ornum='{{item.order_sn}}'>
+          <view class='content-title'>
+            <view class='flexca'>
+              订单编号： {{item.order_sn}}
+            </view>
+            {{item.order_text}}
+          </view>
+          <view class='content-goods'>
+            <view>
+              <view class='message-img-box'>
+                <scroll-view scroll-x class='scroBox'>
+                  <image mode="widthFix" wx:for='{{item.goods}}' wx:key='gimg' wx:for-item='gitem' src='{{gitem.image}}'></image>
+                </scroll-view>
+              </view>
+              <view class="message-price">
+                实付款：<text class="pricess">￥{{item.total_money}}</text>
+                 收益：<text class="pricess2">￥{{item.earn_money}}</text>
+              </view>
+            </view>
+          </view>
+          <view class='content-btn' wx:if='{{item.status!=1&&item.status!=2}}'>
+            <view class='btn_shopper' data-ornum='{{item.order_sn}}' catchtap='trans'>查看物流</view>
+          </view>
+        </view>
+      </block>
+      <!-- </view> -->
+
+
+    </view>
+  </view>
+
+</view>
+<!-- 缺省页  -->
+<view wx:if="{{allorder.length==0}}" class='clothes-box flexda'>
+  <view class='clothes-no'>
+    <image class='image-full' src='https://s10.mogucdn.com/p2/161213/upload_7b01ig2ih5egggj85l1gd8d38790f_514x260.png' style="width:514rpx;background:transparent no-repeat;background-size:cover;"></image>
+  </view>
+  <view style="text-align:center;">
+    <text style='font-size:30rpx;'>
+      暂时没有相关订单
+    </text>
+  </view>
+</view>
+
+  <!-- //上拉加载 -->
+  <view class='page-add-data flexca'>
+    <text>{{pageTottomText}}</text>
+  </view>
+
+
+<!-- 底部btn -->
+<view class='MObtn flex_be'>
+  <view class='MObtnItem'>
+    <view class='MObtnItem_top flex'>
+      <image class='MObtnItem_topimg' src='/imgs/img/icon_ds.png'></image>待收收益</view>
+    <view class='MObtnItem_bot'>￥{{income.earn_money}}</view>
+  </view>
+  <view class='MObtnItem'>
+    <view class='MObtnItem_top flex'>
+      <image class='MObtnItem_topimg' src='/imgs/img/icon_lj.png'></image>累计收益</view>
+    <view class='MObtnItem_bot'>￥{{income.profit_money}}</view>
+  </view>
+  <view class='MObtnItem2' bindtap='toSearch'>
+    <view class='MObtnItem_top flex'>
+      <image class='MObtnItem_topimg' src='/imgs/img/icon_find.png'></image>自定义查询</view>
+  </view>
+</view>

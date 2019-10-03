@@ -1,0 +1,201 @@
+/* pages/mine/myMall/mallMoney/mallGoods/mallGoods.wxss */
+page{
+  background: #f7f7f7
+}
+.goodBox {
+  width: 100%;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+
+.goodBoxTop {
+  width: 100%;
+  align-items: center;
+  padding-bottom: 35rpx;
+}
+
+.goodBoxTop_img {
+  flex: 0 0 180rpx;
+  width: 180rpx;
+  height: 180rpx;
+  margin-right: 20rpx;
+}
+
+.goodBoxTop_r {
+  flex: 1;
+}
+
+.goodBoxTop_rT {
+  align-items: center;
+  margin-bottom: 60rpx;
+}
+
+.goodBoxTop_rTI {
+  width: 100rpx;
+  height: 40rpx;
+  background: #20a162;
+  border-radius: 4rpx;
+  font-size: 26rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+}
+.goodBoxTop_rTI2{
+  background: #fff;
+  color: #999;
+  border:1rpx solid #bbb
+}
+
+.goodBoxTop_rTBa {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+  max-width: 350rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.goodBoxTop_rTBb {
+  font-size: 22rpx;
+  color: #999;
+  max-width: 350rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.goodBoxTop_rB {
+  font-size: 24rpx;
+  color: #333;
+}
+
+/* //低不 */
+
+.googBoxBot {
+  width: 100%;
+  border-top: 1rpx solid #efefef;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 30rpx;
+}
+
+.googBoxBotA {
+  font-size: 28rpx;
+  color: #20a162;
+  margin-right: 40rpx;
+}
+
+.googBoxBotB {
+  font-size: 24rpx;
+  color: #fa505b;
+}
+
+/* //弹框 */
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.maskBox {
+  width: 540rpx;
+  background: #f7f7f7;
+  padding-top: 47rpx;
+  border-radius: 4%;
+  margin: 20% auto 0;
+  overflow: hidden;
+}
+
+.maskBox_tit {
+  text-align: center;
+  font-size: 34rpx;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 45rpx;
+}
+                                                                                                                          
+.maskBox_inp {
+  width: 476rpx;
+  height: 56rpx;
+  border: 1rpx solid rgba(153, 153, 153, 1);
+  border-radius: 10rpx;
+  background: #fff;
+  margin: 0 auto 30rpx;
+  padding-left: 10rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.btnBox {
+  width: 100%;
+  height: 88rpx;
+  border-top: 1rpx solid #eee;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 34rpx;
+}
+
+.btnCancel {
+  width: 50%;
+  height: 100%;
+  color: #999;
+  border-right: 1rpx solid #eee;
+}
+
+.btnSure {
+  width: 50%;
+  height: 100%;
+  color: #20a162;
+}
+/* 购物车缺省页************** */
+
+.carts-default {
+  width: 100%;
+  height: 1000rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  border-top: 2px solid #f7f7f7;
+}
+
+.carts-default view {
+  text-align: center;
+}
+
+.default-img {
+  margin: 0 auto;
+  margin-bottom: 50rpx;
+}
+
+.carts-default .default-img {
+width:300rpx;
+height:300rpx;
+
+}
+
+.carts-default .default-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.carts-default .back-box {
+width:409rpx;
+height:65rpx;
+background:#20A162;
+border-radius:6rpx;
+margin-top:50rpx;
+line-height:65rpx;
+
+}
+
+.carts-default .back-box text {
+  font-size: 30rpx;
+  color: white;
+}

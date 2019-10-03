@@ -1,0 +1,92 @@
+/* pages/mine/myMall/mallOrder/mallOsearch/mallOsearch.wxss */
+page{
+  background: #f7f7f7
+}
+.MOsearch{
+  width: 100%;
+  border-top: 1rpx solid #efefef;
+  padding:0 30rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.MOsearch_top{
+  align-items: center;
+  width: 100%;
+  height: 220rpx;
+}
+.MOsearch_topItema{
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 60rpx;
+}
+.MOsearch_topItemb{
+  font-size: 34rpx;
+  color: #999
+}
+.MOsearch_topItem{
+  text-align: center;
+  width: 200rpx;
+}
+.Ccolor{
+  color: #333
+}
+.line{
+  width: 1rpx;
+  height: 100rpx;
+  background: #efefef
+}
+
+.searchBtn,.Ccolor2{
+  width:100%;
+  height: 80rpx;
+  border-top: 1rpx solid #efefef;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: rgba(32,161,98,.4);
+}
+.Ccolor2{
+   color: rgba(32,161,98,1);
+}
+.MOdata{
+  width: 100%;
+  background: #fff;
+}
+.MOdata_tit{
+  width: 100%;
+  height: 150rpx;
+  align-items: center;
+  border-bottom:  1rpx solid #efefef;
+  padding:0 30rpx
+}
+.MOdata_titL{
+  text-align: center;
+}
+.MOdata_titLa{
+  font-size: 26rpx;
+  color: #999;
+  margin-bottom: 30rpx;
+}
+.MOdata_cont{
+  width: 100%;
+  padding:0 30rpx;
+}
+.MOdata_contItem{
+  width: 100%;
+  border-bottom:1rpx solid #efefef;
+  align-items: center;
+  height: 126rpx; 
+}
+.MOdata_contItemLa{
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+.MOdata_contItemLb{
+  font-size: 22rpx;
+  color: #999;
+}
+.MOdata_contItemR{
+  font-size: 36rpx;
+  color: #333;
+}

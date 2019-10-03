@@ -1,0 +1,98 @@
+<!--pages/apply/verification/verification.wxml-->
+<form bindsubmit="formSubmitl">
+  <view class='line'></view>
+  <view class='shop flexw'>
+    <view class='shoptext'>实名认证您的信息</view>
+    <view class='shopContent'>请您认真准确地完善您的信息</view>
+  </view>
+  <!-- from表单提交 -->
+  <view>
+    <view class='flexw inputs'>
+      <view class='input-box flexac'>
+        <view class='f28 phone28'>手机号</view>
+        <view class='phoneright'>{{phone}}</view>
+        <input style='display:none' name="phone" value="{{phone}}" />
+      </view>
+      <!-- 店铺名称 -->
+      <view class='input-box flexac'>
+        <view class='f28'>姓名</view>
+        <input maxlength="20" name="name" placeholder='请输入姓名' />
+      </view>
+      <!-- 所在区域--------------------- -->
+      <view class='input-box flexac'>
+        <!-- <view>
+              <text>所在区域</text>
+            </view> -->
+        <view class='f28'>现居地</view>
+        <view class="section">
+          <picker mode="region" bindchange="bindRegionChange" custom-item="{{customItem}}">
+            <view class="picker f28">
+              {{region}}
+            </view>
+            <!-- <view wx:else>
+              {{myaddress[0]}}-{{myaddress[1]}}-{{myaddress[2]}}
+            </view> -->
+          </picker>
+        </view>
+        <!-- <image class='righticon' src='/imgs/img/right_grey@2x.png'></image> -->
+        <image src='/imgs/img/right_grey@2x.png' class='right-right'></image>
+        <input style='display:none' name="county" value="{{region[0]}}-{{region[1]}}-{{region[2]}}" />
+      </view>
+      <!-- 地址 -->
+      <view class='input-box flexac'>
+        <view class='f28'>详细地址</view>
+        <input name='address' placeholder='请输入地址' style="max-width:452rpx;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;"></input>
+      </view>
+      <view class='input-box flexac'>
+        <view class='f28'>店铺名称</view>
+        <input name='storename' placeholder='请输入店铺名称' style="max-width:452rpx;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;"></input>
+      </view>
+
+
+      <!-- <view class='orinfo flex_be'>
+        <view class='flex'>代理模式</view>
+        <view class='flex'>
+          <view class="section">
+            <picker bindchange="moshiChange" value="{{moshiindex}}" range="{{moshi}}">
+              <view class="picker">
+                {{moshi[moshiindex]}}
+              </view>
+            </picker>
+          </view>
+          <input style='display:none' maxlength="100" name="branch" value="{{moshi[moshiindex]}}" />
+          <image class='rigthimage' src='/imgs/img/right_grey@2x.png'></image>
+        </view>
+      </view> -->
+      <!-- 图片 -->
+
+
+      <!--图片  -->
+      <view class="upload_title">身份上传</view>
+      <view class='media'>
+        <!--上传的图片展示  -->
+        <!--身份证正面上传入口-->
+        <view class='addimg' bindtap='addimage_f' wx:if='{{imgbox3.length<1}}'>
+          <image src='{{img}}'></image>
+        </view>
+        <!-- 身份证正面展示 -->
+        <view class='showimg' wx:for='{{imgbox3}}' wx:key=''>
+          <image class="showimgs_f" src='{{item}}' style="height:190rpx;width:300rpx;"></image>
+          <image src="/imgs/img/delete_s.png" class="delate_f" data-index='{{index}}' bindtap='delateimg_f'></image>
+        </view>
+        <!-- 身份证反面上传入口 -->
+        <view class='addimg_r' bindtap='addimage_r' wx:if='{{imgbox4.length<1}}'>
+          <image src='{{imgs1}}'></image>
+        </view>
+        <!-- 身份证反面展示 -->
+        <view class='showimg' wx:for='{{imgbox4}}' wx:key=''>
+          <image class="showimgs_r" src='{{item}}' style="height:190rpx;width:300rpx"></image>
+          <image src="/imgs/img/delete_s.png" class="delate_r" data-index='{{index}}' bindtap='delateimg_r'></image>
+        </view>
+      </view>
+
+
+      <button formType="submit">提交</button>
+    </view>
+  </view>
+
+</form>

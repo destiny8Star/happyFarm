@@ -1,0 +1,109 @@
+/* pages/apply/notes/notes.wxss */
+page{
+  border-top:1rpx solid #f7f7f7;
+
+}
+.outbox {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #333;
+}
+.rr{
+  width:95%;
+  margin: 0 auto;
+  font-size: 30rpx;
+  line-height: 70rpx;
+}
+.innerbox {
+  padding-left: 33rpx;
+  padding-right: 29rpx;
+  margin-bottom: 160rpx;
+  line-height: 65rpx;
+}
+
+.bottom_box {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: rgba(255, 255, 255, 1);
+  /* border-radius:60rpx 60rpx 0px 0px;
+box-shadow:8px 0px 16px rgba(0,0,0,0.2) */
+}
+
+.agree {
+  /* width: 480rpx; */
+
+margin: 0 auto;
+color: #ffffff;
+line-height: 98rpx;
+height:98rpx;
+text-align: center;
+background:rgba(32,161,98,1);
+box-shadow:0px -8px 30px 0px rgba(16,57,37,0.4);
+}
+
+/* 富文本 */
+
+.sus-h2 {
+  color: red;
+}
+
+.wxParse {
+  width: 93%;
+  margin: 0 auto;
+  margin-bottom: 165rpx;
+  margin-top: 5rpx;
+}
+
+.wxParse-p {
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+
+image {
+  width: 100%;
+}
+
+.wenben-end {
+  width: 96%;
+  position: relative;
+  margin: 0 auto;
+  padding: 20rpx 0;
+}
+
+.time {
+  position: absolute;
+  width: 50%;
+  font-size: 28rpx;
+  text-align: left;
+  color: #666;
+  margin-left: 15rpx;
+}
+
+.look {
+  color: #666;
+  font-size: 28rpx;
+  animation-fill-mode: right;
+  float: right;
+  margin-right: 15rpx;
+}
+
+.time text {
+  margin-left: 20rpx;
+}
+
+.bott {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+  bottom: 0;
+  position: fixed;
+}
+
+button{
+  border-radius: 0
+}

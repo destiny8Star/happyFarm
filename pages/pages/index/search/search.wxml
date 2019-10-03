@@ -1,0 +1,51 @@
+<import src='/template/pubu/indexList.wxml' />
+<!-- 搜索框 -->
+<form report-submit='true' bindsubmit='onSearchTap'>
+  <view class='header'>
+    <!-- 搜索容器：加上背景色的框 横向排布 -->
+    <view class='search_box'>
+      <!-- 图标 -->
+        <image src="/imgs/img/btn_search.png" class="search_a"></image>
+      <!-- 输入框 -->
+       <input maxlength="50" class="search"  bindinput="bindseInput" placeholder='请输入搜索内容' placeholder-style="color:#C1C1C1;font-size:26rpx;"></input>
+      <!-- <input name="keyword" placeholder='请输入搜索内容'></input> -->
+    </view>
+      <view class='s_btn'  data-search='1' bindtap='reData'>搜索</view>
+    <!-- <button class='s_btn' form-type='submit'  bindtap='reData'>搜索</button> -->
+  </view>
+
+</form>
+<!--热门搜索  -->
+<view class='hotbox' wx:if='{{servers.length==0}}'>
+  <view class='title'>热门搜索</view>
+  <view class='market flex'>
+    <view class='hotmak' wx:for='{{hot_its}}' data-hot='{{item.label}}'bindtap='his_search' wx:key='ind'>{{item.label}}</view>
+    
+  </view>
+  <view class='title flex_be'>搜索历史
+  <!-- <view class='title2'bindtap='clear_his'>清除历史</view> -->
+  </view>
+  
+  <view class='market flex'>
+    <view class='hotmak' wx:for='{{searchboxs}}' data-hot='{{item.label}}'bindtap='his_search' wx:key='ind'>{{item.label}}</view>
+
+  </view>
+</view>
+
+<view class='goodsList' wx:else>
+   <view class='goods_left'>
+    <block wx:for='{{servers}}' wx:key='ind' wx:if='{{index%2==0}}'>
+      <template is='indexList' data="{{...item}}" />
+    </block>
+  </view>
+  <view class='goods_right'>
+    <block wx:for='{{servers}}' wx:key='ind' wx:if='{{index%2==1}}'>
+      <template is='indexList' data="{{...item}}" />
+    </block>
+  </view>
+</view>
+  <!-- <storlist id="storlist" list="{{servers}}" bind:myevent="allRefresh"></storlist> -->
+  <!-- //上来加载 -->
+<view class='page-add-data flexca'>
+  <text>{{pageTottomText}}</text>
+</view>

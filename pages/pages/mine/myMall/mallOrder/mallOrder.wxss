@@ -1,0 +1,56 @@
+/* pages/mine/myMall/mallOrder/mallOrder.wxss */
+@import '/pages/mine/Allorders/Allorders.wxss';
+/* .goods-cotainer{
+  margin-bottom: 150rpx;
+} */
+page{
+padding-bottom: 150rpx
+
+}
+.MObtn{
+  width: 100%;
+  height: 140rpx;
+  background: #20A162;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+}
+.MObtnItem{
+  width: 33.33%;
+  text-align: center
+}
+.MObtnItem2{
+  width: 33.33%;
+  text-align: center;
+background:rgba(255,255,255,.2);
+height: 100%;
+line-height:140rpx
+}
+.MObtnItem_top{
+  font-size: 24rpx;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+.MObtnItem_topimg{
+  width:36rpx;
+  height: 36rpx;
+  margin-right: 18rpx;
+}
+.MObtnItem_bot{
+  font-size: 30rpx;
+  color:rgba(255,255,255,.6)
+}
+.pricess{
+margin-right: 30rpx;  
+}
+.pricess2{
+  color: #EE3F4D
+}
+/* 缺省页 */
+.clothes-box{
+  width: 100%;
+  padding-top: 50rpx;
+}

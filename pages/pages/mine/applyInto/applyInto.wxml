@@ -1,0 +1,10 @@
+<!--pages/mine/applyInto/applyInto.wxml-->
+<view class="outbox">
+<image class="applyimg" src="{{url}}"></image>
+
+
+
+<view class="agree" bindtap='applyInto'>立即申请店铺代理商</view>
+
+
+</view>

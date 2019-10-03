@@ -1,0 +1,46 @@
+<!--pages/mine/myMall/mallOrder/mallOsearch/mallOsearch.wxml-->
+<view class='MOsearch'>
+  <view class='MOsearch_top flex_ar'>
+    <view class='MOsearch_topItem'>
+      <view class='MOsearch_topItema'>开始日期</view>
+      <picker class='MOsearch_topItemb  {{date!="选择日期"?"Ccolor":""}}' mode="date" value="{{date}}"  bindchange="bindDateChange">
+          <view class="picker">{{date}}</view>
+      </picker>
+    </view>
+    <view class='line'></view>
+     <view class='MOsearch_topItem'>
+      <view class='MOsearch_topItema'>截止日期</view>
+      <picker class='MOsearch_topItemb {{date2!="选择日期"?"Ccolor":""}}' mode="date" value="{{date2}}"  bindchange="bindDateChange2">
+          <view class="picker">{{date2}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='searchBtn Ccolor2' wx:if='{{date&&date2!="选择日期"}}' bindtap='search'>查询</view>
+  <view class='searchBtn' wx:else>查询</view>
+</view>
+
+<!-- //底部获取内容 -->
+<view class='MOdata'>
+    <view class='MOdata_tit flex_be'>
+        <view class='MOdata_titL'>
+           <view class='MOdata_titLa'>订单笔数</view>
+           <view class='MOdata_titLb'>{{info.count||0}}</view>
+        </view>
+         <view class='MOdata_titL'>
+           <view class='MOdata_titLa'>累计收益(元)</view>
+           <view class='MOdata_titLb'>{{info.total_money||0}}</view>
+        </view>
+    </view>
+<!-- //内容 -->
+    <view class='MOdata_cont'>
+        <view class='MOdata_contItem flex_be' wx:for='{{info.order}}' wx:key='ind'>
+            <view class='MOdata_contItemL'>
+                <view class='MOdata_contItemLa'>订单编号：{{item.order_sn}}</view>
+                <view class='MOdata_contItemLb'>{{item.order_date}}</view>
+            </view>
+             <view class='MOdata_contItemR'>
+               {{item.earn_money}}
+            </view>
+        </view>
+    </view>
+</view>

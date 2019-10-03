@@ -1,0 +1,82 @@
+<!--pages/mine/myMall/myMall.wxml-->
+
+<!--pages/mall/inmall/inmall.wxml-->
+<import src='/template/pubu/indexList.wxml' />
+<view class='inMall_top' style="background-image:url('{{mallInfo.background}}')">
+<!-- <image src="/imgs/img/bg_dp.png" class='inMall_top'></image> -->
+  <view class='inMall_tit flex'>
+    <image src='{{mallInfo.store_avatar}}' class='inMall_titImg' bindtap='toMallinfo'></image>
+    <view class='inMall_titWoc'>
+      <view class='inMall_titWoct flex'>{{mallInfo.store_name}}
+        <image class='myMall_titTopBand' wx:if='{{mallInfo.grade==1}}' src='/imgs/img/lv1.png'></image>
+        <image class='myMall_titTopBand' wx:elif='{{mallInfo.grade==2}}' src='/imgs/img/lv2.png'></image>
+        <image class='myMall_titTopBand' wx:else src='/imgs/img/lv3.png'></image>
+
+      </view>
+      <view class='inMall_titWocb'>全部商品：{{mallInfo.goods_num}}</view>
+    </view>
+  </view>
+  <view class='inMall_cont {{dowImg?"":"inMall_conMore"}}'>
+   {{mallInfo.signature}}
+    <view class='imgDow' wx:if='{{dowImg}}' bindtap='topBtn'>
+      <image src='/imgs/img/btn_down.png'></image>
+    </view>
+    <view class='imgDow' wx:if='{{!dowImg}}' bindtap='topBtn'>
+      <image src='/imgs/img/btn_top.png'></image>
+    </view>
+  </view>
+  <view class='myMall_tit'>
+    <view class='myMall_titTop flex_be'>
+      <view class='myMall_titTopl'>店铺订单</view>
+      <view class='myMall_titTopr' bindtap='toOrder' data-id='0' >今日新增订单
+        <text style='color:#20A162'>{{mallInfo.today_order}}</text> 笔
+          <image src='/imgs/img/btn_next.png' class='mall_titRight_img'></image>
+      </view>
+    </view>
+    <view class='myMall_titBot flex_be'>
+      <view class='myMall_titBot_item' bindtap='toOrder' data-id='1'>
+        <image class='myMall_titBot_itemI' src='/imgs/img/dp_btn1.png'></image>待发货</view>
+      <view class='myMall_titBot_item' bindtap='toOrder' data-id='2'>
+        <image class='myMall_titBot_itemI' src='/imgs/img/dp_btn2.png'></image>待收货</view>
+      <view class='myMall_titBot_item' bindtap='toOrder' data-id='3'>
+        <image class='myMall_titBot_itemI' src='/imgs/img/dp_btn3.png'></image>已完成</view>
+      <view class='myMall_titBot_item' bindtap='toOrder' data-id='4'>
+        <image class='myMall_titBot_itemI' src='/imgs/img/dp_btn4.png'></image>退款</view>
+    </view>
+  </view>
+</view>
+<!-- //可提现金额 -->
+<view class='myMall_txbox'>
+    <view class='myMall_titTop flex_be'>
+      <view class='myMall_titTopl'>可提现金额 <text style='font-size:24rpx'>(元): </text><text style='color:#20A162'> {{mallInfo.balance}}</text> </view>
+      <view class='myMall_conTopr' bindtap='toTx'>提现</view>
+    </view>
+    <view class='myMall_conbot flex_ar'>
+        <view class='myMall_conbot_item flex_clb'>
+          <text class='myMall_conbot_itema'>{{mallInfo.recharge}}</text>
+          <text class='myMall_conbot_itemb'>充值余额(元)</text>
+        </view>
+        <view class='line'></view>
+         <view class='myMall_conbot_item flex_clb'>
+          <text class='myMall_conbot_itema'>{{mallInfo.total}}</text>
+          <text class='myMall_conbot_itemb'>累计收益(元)</text>
+        </view>
+    </view>
+</view>
+<!-- //我的商品库 -->
+<view class='myStore'>
+    <view class='myMall_titTop flex_be'>
+      <view class='myMall_titTopl'>我的商品库</view>
+      <view class='myMall_titTopr' bindtap='toGoods'>查看全部代理商品
+           <image src='/imgs/img/btn_next.png' class='mall_titRight_img'></image>
+      </view>
+    </view>
+     <view class='mallPic'>
+      <scroll-view class='mall_tab' scroll-x>
+        <view class='mallGoodsbox' wx:for='{{goods}}' wx:key='good'>
+           <image src='{{item.image}}' mode='aspectFill' class='mall_tabItem'></image>
+            <view class='mallPrice'>￥{{item.sell_price}}</view>
+        </view>
+      </scroll-view>
+    </view>
+</view>

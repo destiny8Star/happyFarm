@@ -1,0 +1,49 @@
+<!--pages/mine/myMall/mallMoney/mallMoney.wxml-->
+<view style="width:100%;height:383rpx;">
+  <view class="pages">
+    <image class="bac" src='/imgs/img/bg_account.png'></image>
+  </view>
+  <view class="reward">
+    <!-- <view class="reward-title">可提现余额（元）</view> -->
+    <view class="reward-number">{{mInfo.balance}}</view>
+    <view class="reward-submit">
+   
+
+     <view class="sureTitle" > 可提现余额（元）</view>
+      <view class="sure" bindtap='clickinto'>提现 <image src="/imgs/img/icon_next2@2x.png" style="width:10rpx;height:20rpx;"></image> </view>
+    </view>
+    <view class='tx_money flex_ar'>
+        <view class='tx_moneyItem'>
+          <view class='tx_moneyItema'>{{mInfo.recharge}}</view>
+          <view class='tx_moneyItemb'>充值余额(元)</view>
+        </view>
+        <view class='tx_moneyItem'>
+          <view class='tx_moneyItema'>{{mInfo.total}}</view>
+          <view class='tx_moneyItemb'>累计收益(元)</view>
+        </view>
+    </view>
+  </view>
+</view>
+<view class="outbox">
+  <view class="amount_title">账户明细</view>
+  <view>
+    <view class="listdatail" bindtap="detailInto" wx:for='{{mDetail}}' wx:key='ind' data-id='{{item.id}}'>
+        <!-- 左侧 -->
+        <view class="next-box">
+          <view class="leftimgs">
+            <image class="imgs" src="/imgs/img/h1.png"></image>
+          </view>
+          <view class="right_contain">
+            <view class="center-contain">
+              <text class="fir">余额提现</text>
+              <text class="three">2018-01-07</text>
+            </view>
+            <view class="right-contain">
+              <view class="money">+100</view>
+            </view>
+          </view>
+        </view>
+    </view>
+    <view class="wu" wx:if="{{mDetail.length==0}}">暂无数据~</view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<!--引入模板-->
+<import src='/template/pubu/indexList.wxml' />
+<!-- 顶部tabbar -->
+<scroll-view class='index_tab' scroll-x>
+  <view class='indexTab_item {{selTab==item.id?"selTab":""}}'data-id='{{item.id}}' wx:for='{{indexTab}}' wx:key='index' bindtap='selT'>{{item.class_name}}</view>
+</scroll-view>
+<!-- //搜索 -->
+<view class='indexSearch' bindtap='toSearch'>
+  <image src='/imgs/img/btn_search.png'></image>
+</view>
+<!-- 首页banner -->
+<swiper class='indexBanner' autoplay='true' previous-margin='80rpx' next-margin='80rpx' circular='true' bindchange='changeSty'>
+  <block wx:for="{{banner}}" wx:key='ind'>
+    <swiper-item>
+      <image src="{{item.image}}" class="slide-image {{index==changeSty?'changeSty':''}}" width="355" height="150" bindtap='toDetail' data-id='{{item.goods_id}}' />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- //游戏 -->
+<view class='game' bindtap='togame'><image src='/imgs/img/entrance.png'></image></view>
+<!-- //商品列表/ -->
+<view class='goods'>
+  <view class='goods_left'>
+    <block wx:for='{{goodslist}}' wx:key='ind' wx:if='{{index%2==0}}'>
+      <template is='indexList' data="{{...item}}" />
+    </block>
+  </view>
+  <view class='goods_right'>
+    <block wx:for='{{goodslist}}' wx:key='ind' wx:if='{{index%2==1}}'>
+      <template is='indexList' data="{{...item}}" />
+    </block>
+  </view>
+</view>
+<!-- //上来加载 -->
+<view class='page-add-data flexca'>
+  <text>{{pageTottomText}}</text>
+</view>

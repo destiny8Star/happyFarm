@@ -1,0 +1,56 @@
+/* pages/mine/applyInto/applyInto.wxss */
+page{
+  -webkit-user-select:none;
+user-select:none;
+width:100%;
+overflow-x:hidden;
+height:100%;
+
+}
+.outbox{
+width:100%;
+height:100%;
+margin:0 auto;
+/* position:relative; */
+display:flex;
+
+}
+.applyimg{
+width:100%;
+height:100%;
+position:absolute;
+
+
+}
+
+.btn{
+margin-top:987rpx;
+width:670rpx;
+height:80rpx;
+line-height:80rpx;
+font-size:32rpx;
+color:#20A162;
+background:rgba(255,255,255,1);
+
+}
+.btn_img{
+  width:40rpx;
+  height:40rpx;
+  vertical-align: middle;
+}
+.agree{
+width:690rpx;
+background:rgba(255,255,255,1);
+box-shadow:0px 0px 20px 0px rgba(47,79,64,0.2);
+border-radius:8px;
+margin:0 auto;
+color:#20A162;
+font-size:32rpx;
+z-index:3;
+height:88rpx;
+margin-top:1079rpx;
+text-align:center;
+line-height:88rpx;
+
+  
+}

@@ -1,0 +1,162 @@
+<!--pages/mine/Allorders/orderdetail/orderdetail.wxml-->
+<view>
+
+  <view class='order-cotainer'>
+    <!-- 1地址详情 -->
+    <view class='order-site'>
+      <view class='site-state'>
+        <view class='state-img'>
+          <image src='/imgs/img/icon_circle.png'></image>
+        </view>
+        订单状态：
+        <text>{{allInfo.order_text}}</text>
+      </view>
+      <view class='site-mess'>
+        <view class='site-title'>
+          <view class='site-img'>
+            <image src='/imgs/img/icon_circle.png'></image>
+          </view>
+          <text>收货信息</text>
+        </view>
+        <view class='site-box'>
+          <view class='site-middle'>
+            <view class='site-middle-top'>
+              <view class="name" style="margin-right:15rpx;">
+                收件人：
+                <text>{{allInfo.username}}</text>
+              </view>
+              <view>
+                <text>（{{allInfo.phone}}）</text>
+              </view>
+            </view>
+            <view class='site-middle-bottom'>
+              收货地址：
+              <text>{{allInfo.address}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 2订单信息 -->
+    <view class='order-message'>
+      <view class='message-title flexa'>
+        <view class='site-img'>
+          <image src='/imgs/img/icon_circle.png'></image>
+        </view>
+        商品信息
+      </view>
+      <view style='background:#fff'>
+        <view class='message-img-box'>
+          <view class='imgBox flex' style='width:560rpx'>
+            <view class='message-img' wx:key="orderpay" wx:for="{{allInfo.goods}}" wx:if='{{index<=4}}'>
+              <image mode="widthFix" src='{{item.image}}'></image>
+            </view>
+          </view>
+          <view class='message-right' bindtap='toGoods' data-sord='{{allInfo.store_order_sn}}'>共{{allInfo.goods_num}}件
+            <image src='/imgs/img/btn_next.png' style='width:11rpx;height:20rpx'></image>
+          </view>
+        </view>
+      </view>
+      <!-- <view wx:key="orderpay" wx:for="{{orderList.goods}}" wx:for-index="index">
+        <view class='message-img-box'>
+          <view class='message-img'>
+            <image mode="widthFix" src='{{hpUrl}}Uploads/{{item.goods.url}}'></image>
+          </view>
+          <view class='message-center'>
+            <view>{{item.goods.goodsname}}</view>
+            <view>￥{{item.goods.price}}</view>
+          </view>
+          <view class='message-right'>X{{item.goodsnum}}</view>
+        </view>
+      </view> -->
+    </view>
+    <!-- 3配送方式 -->
+    <view class='order-dist' style='color:#333333; border-bottom:0;'>
+      <!-- <view class='dist-list'>
+        <text>运费</text>
+        <text>￥{{allInfo.postage}}</text>
+      </view> -->
+      <view class='dist-list'>
+        <text>商品金额</text>
+        <text>￥{{allInfo.total_money}}</text>
+      </view>
+      <view class='dist-list'>
+        <text></text>
+        <view class='dist-list-text'>
+
+          <text>实收款：</text>
+          <text style='color:#20A162; border-bottom:0;margin-right:30rpx'>￥{{allInfo.total_money}}</text>
+          
+          <text>收益：</text>
+          <text style='color:#EE3F4D; border-bottom:0;'>￥{{allInfo.earn_money}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 4支付方式 -->
+    <view class='order-pay'>
+      <view class='pay-text'>
+        <view class='message-title flexa'>
+          <image class="circle_" src='/imgs/img/icon_circle.png'></image>
+          <text>支付方式</text>
+        </view>
+        <view class="pay-choice">
+          <image src="/imgs/img/wx_pay.png" style="width:129rpx;height:36rpx;"></image>
+          <!-- <text>微信支付</text> -->
+        </view>
+      </view>
+    </view>
+    <!-- 6时间列表 -->
+    <view class='order-time'>
+      <view class='message-title flexa' style="height:88rpx;border-bottom:1rpx solid #EFEFEF;">
+        <image class="circle_" src='/imgs/img/icon_circle.png'></image>
+        <text>订单信息</text>
+      </view>
+      <view class='time-list'>
+        <text>订单编号：</text>
+        <text>{{allInfo.order_sn}}</text>
+      </view>
+      <view class='time-list'>
+        <text>下单时间：</text>
+        <text>{{allInfo.order_date}}</text>
+      </view>
+      <view class='time-list' wx:if='{{allInfo.pay_date}}'>
+        <text>支付时间：</text>
+        <text>{{allInfo.pay_date}}</text>
+      </view>
+      <view class='time-list' wx:if='{{allInfo.finish_date}}'>
+        <text>完成时间：</text>
+        <text>{{allInfo.finish_date}}</text>
+      </view>
+    </view>
+       <!-- 退款信息 -->
+    <view class='order-time' wx:if='{{allInfo.refund}}'>
+      <view class='message-title flexa' style="height:88rpx;border-bottom:1rpx solid #EFEFEF;">
+        <image class="circle_" src='/imgs/img/icon_circle.png'></image>
+        <text>退款信息</text>
+      </view>
+      <view class='time-list'>
+        <text>申请时间：</text>
+        <text>{{allInfo.refund.refund_date}}</text>
+      </view>
+      <!-- <view class='time-list'>
+        <text>退款金额：</text>
+        <text>￥{{allInfo.goods_money}}</text>
+      </view> -->
+      <view class='time-list' wx:if='{{allInfo.refund_date}}'>
+        <text>退款时间：</text>
+        <text>{{allInfo.refund_date}}</text>
+      </view>
+      <view class='refound-content'>
+          <view class='content-tit'>退款缘由</view>
+          <view class='content-cont'>{{allInfo.refund.content}}</view>
+          <image class='content-img' wx:for='{{allInfo.refund.files}}'src='{{item}}' wx:key='ind'></image>
+      </view>
+    </view>
+    <!-- 7提交订单 -->
+    <view class='order-submit'>
+      <view class='submit-left'></view>
+       <view class='submit-right-t .submit-right-q' wx:if='{{allInfo.status!=0&&allInfo.status!=1&&allInfo.status!=2}}' data-ornum='{{allInfo.order_sn}}' bindtap='trans'>查看物流</view>
+    </view>
+  </view>
+
+</view>

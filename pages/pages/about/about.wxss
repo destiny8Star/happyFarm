@@ -1,0 +1,348 @@
+.HappyFarm-game-backgroundImg{
+  width: 750rpx;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+}
+/* 农场内容 */
+.HappyFarm-game-content{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  box-sizing:border-box;
+  width:100%;
+  height:100%;
+}
+.HappyFarm-game-content_headerTop{
+  width: 100%;
+  height: 49rpx;
+  display: flex;
+}
+.HappyFarm-game-content_headerTop_home{
+  width: 114rpx;
+  height: 48rpx;
+  margin-top: 31rpx;
+  margin-left: 21rpx;
+}
+.HappyFarm-game-content_news{
+  width:400rpx;
+  display: flex;
+  align-items: center;
+  line-height: 48rpx;
+  height:48rpx;
+  background:rgba(0,0,0,0.3);
+  border-radius:24rpx;
+  margin-top: 30rpx;
+  margin-left: 34rpx;
+}
+.HappyFarm-game-content_news image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 50rpx;
+}
+.HappyFarm-game-content_news text{
+  font-size:22rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  margin-left: 11rpx;
+}
+
+/* 植物 */
+.HappyFarm-game-botany{
+  width:750rpx;
+  position:fixed;
+  height:500rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index:199;
+  top:392rpx;
+}
+.HappyFarm-game-childhood{
+  width: 18rpx;
+  z-index: 199;
+}
+.HappyFarm-game-grow{
+  width: 55rpx;
+  z-index: 199;
+}
+.HappyFarm-game-ripe{
+  width: 131rpx;
+  z-index: 199;
+}
+
+/* 进度条 */
+.HappyFarm-game-progress{
+  width: 100%;
+  position: fixed;
+  z-index: 599;
+  height: 30rpx;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  bottom: 186rpx;
+}
+.sub-title{
+  width: 100%;
+}
+
+/* 签到 */
+.HappyFarm-game-content_sign{
+  width:94rpx;
+  height: 82rpx;
+  position: fixed;
+  z-index: 99;
+  right: 26rpx;
+  top: 99rpx;
+}
+.signBox-shade{
+  width: 100%;
+  height: 100vh;
+  background:rgba(0,0,0,.8);
+  z-index: 1999;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+.signBox{
+  width: 374rpx;
+  height: 288rpx;
+  margin:35% auto;
+}
+/* 好友助力 */
+.HappyFarm-game-content_help{
+  width:94rpx;
+  height: 85rpx;
+  position: fixed;
+  z-index: 99;
+  right: 26rpx;
+  top: 237rpx;
+}
+
+/* 浇水 */
+.HappyFarm-game-drop{
+  width: 96rpx;
+  height: 96rpx;
+  position: fixed;
+  right: 25rpx;
+  bottom: 154rpx;
+  z-index: 999;
+}
+/* 水滴动画效果 */
+.HappyFarm-game-content_bg{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  opacity: 0;
+}
+.HappyFarm-game-farm_water{
+  width: 100%;
+  display: flex;
+  z-index: 99;
+  justify-content: center;
+  height: 400rpx;
+  position: relative;
+  top: 570rpx;
+}
+.HappyFarm-game-farm_waterImg{
+  width: 44rpx;
+  height: 103rpx;
+  position: absolute;
+}
+
+/* 底部 */
+.HappyFarm-game-bottom{
+  width: 100%;
+  position: fixed;
+  height: 150rpx;
+  display: flex;
+  left: 0;
+  background:rgba(0,0,0,0.3);
+  align-items: center;
+  white-space: nowrap;
+  bottom: 0;
+  z-index: 99;
+  padding-left:25px;
+}
+.HappyFarm-game-bottom_image{
+  position: fixed;
+  left: 0;
+  width: 58rpx;
+  height: 190rpx;
+  bottom: 0;
+  z-index: 199;
+}
+.HappyFarm-game-scroll-scroll_X{
+  width: 100%;
+  overflow: hidden;
+  height:150rpx;
+  display:flex;
+  flex-direction:row;
+  white-space:nowrap;
+  background:rgba(0,0,0,0.3);
+  align-items:center;
+  /* margin-top:39rpx;
+  left: 58rpx;
+  position:fixed;
+  bottom:0;
+  padding-right: 20rpx */
+}
+.HappyFarm-game-scroll-scroll_X_view{
+  display: inline-block;
+  text-align: center;
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx 23rpx;
+}
+.HappyFarm-game-scroll-scroll_X_image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.HappyFarm-game-scroll-scroll_X_image image{
+  width: 100%;
+  height: 100%; 
+  border-radius: 50%;
+}
+.HappyFarm-game-scroll-scroll_X_view_text{
+  font-size:22rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  margin-top: 7rpx;
+}
+
+
+
+/* 判断用户进来是否领取种子 */
+.HappyFarm-game-Seedfarm{
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+}
+.HappyFarm-game-Seedfarm_viewContent{
+  width: 100%;
+  margin-top: 218rpx;
+  display: flex;
+  justify-content: center;
+}
+.HappyFarm-game-Seedfarm_viewContent image {
+  width: 374rpx;
+  position: relative;
+  height: 386rpx;
+}
+.HappyFarm-game-Seedfarm_viewContent_select{
+  width: 100%;
+  position: absolute;
+  top: 112rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 88rpx;
+}
+.seedimg{
+  width:88rpx;
+  height: 88rpx;
+  /* border: 2rpx solid #50A316; */
+  border-radius: 50%;
+}
+.seedimg image{
+ width: 88rpx;
+  height: 88rpx;
+}
+.imgSel{
+  background: #50A316
+}
+.seedtext{
+  font-size: 26rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 20rpx
+}
+/* .HappyFarm-game-Seedfarm_viewContent_select image{
+  width: 88rpx;
+  height: 88rpx;
+} */
+.HappyFarm-game-Seedfarm_viewContent_click{
+  position:absolute;
+  top:163rpx;
+  opacity: 0;
+  left:93rpx;
+  width:186rpx;
+}
+
+/* //动画 */
+@keyframes lanimation
+{
+  0% {bottom:154rpx;right:25rpx;}
+  25% {right:220rpx;bottom:550rpx;}
+  50%{transform:rotate(-70deg)}
+  75% {right:220rpx;bottom:550rpx;}
+   100% {bottom:154rpx;right:25rpx;}
+} 
+.jug{
+   animation: lanimation 3s ease-in infinite
+}
+/* //没有好友助力 */
+.nofriend{
+  font-size: 34rpx;
+  color: #000;
+  text-align: center;
+  margin-top: 20rpx
+}
+/* //收获弹框 */
+.gainBox{
+   width: 374rpx;
+  height: 504rpx;
+  margin:30% auto;
+}
+/* //收获弹框 */
+.friBox{
+   width: 392rpx;
+  height: 413rpx;
+  margin:30% auto;
+}
+/* //g功啊高 */
+.swiper_container1 {
+  height: 100%;
+  float: left;
+  width: 400rpx;
+}
+.sItem{
+  display: flex;
+  align-items: center;
+}
+.sImage{
+  width:36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  margin-left: 30rpx;
+}
+.swiper_item1 {
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 22rpx;
+  color: #FFFFFF;
+  margin-left: 11rpx;
+}

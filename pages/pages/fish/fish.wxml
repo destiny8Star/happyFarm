@@ -1,0 +1,110 @@
+<image class='HappyFarm-game-backgroundImg' src="/img/img/bg_fish@2x.png" mode="widthFix">
+  <!-- 农场内容上面顶部 -->
+  <view class='HappyFarm-game-content'>
+    <view class='HappyFarm-game-content_headerTop'>
+      <image src='/img/img/btn_backhome.png' class='HappyFarm-game-content_headerTop_home' bindtap='toHome'></image>
+      <view class='HappyFarm-game-content_news'>
+        <!-- <image src='/img/img/1@2x.png'></image>
+        <text>又又种的5斤稻谷正在配送</text> -->
+        <swiper class="swiper_container1" vertical="true" autoplay="true" circular="true" interval="2000">
+          <block wx:for="{{msgList}}" wx:key="unique">
+              <swiper-item class='sItem'>
+                <image  class='sImage'src='{{item.ava}}'></image>
+                <view class="swiper_item1">{{item.text}}</view>
+              </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+  </view>
+</image>
+
+<!-- 鱼 -->
+<view class='HappyFarm-game-botany'>
+  <image src='/img/img/fish.gif' mode="widthFix" class='HappyFarm-game-ripe' animation="{{animationCloudData}}" style='right:{{fishRight}};' ></image>
+</view>
+<!-- <view class='HappyFarm-game-botany'>
+  <image src='/img/img/fish.gif' mode="widthFix" class='HappyFarm-game-ripe' animation="{{animationCloudData}}" style='right:{{fishRight}};' wx:if='{{myInfo.grow<100}}'></image>
+  <image src='/img/img/fish.gif' mode="widthFix" class='HappyFarm-game-ripe' animation="{{animationCloudData}}" style='right:{{fishRight}};' wx:elif='{{myInfo.grow==100&&fromF}}'></image>
+  <image src='/img/img/fish.gif' mode="widthFix" class='HappyFarm-game-ripe' animation="{{animationCloudData}}" style='right:{{fishRight}};' wx:elif='{{myInfo.grow==100}}' bindtap='showGain'></image>
+</view> -->
+
+<view class='HappyFarm-game-progress'>
+  <view class="page__bd page__bd_spacing">
+    <view class="sub-title" wx:if='{{myInfo.grow<100}}' style='font-size:24rpx;color:#000;text-align:center'>{{myInfo.grow}}%</view>
+    <view class="sub-title" wx:elif='{{myInfo.grow==100&&!fromF}}' style='font-size:24rpx;color:#eee;text-align:center' bindtap='showGain'>点击收获</view>
+    <wux-progress status="progress" percent="{{myInfo.grow}}" activeColor="#177696" />
+    <wux-white-space />
+  </view>
+</view>
+<!-- 签到 -->
+<block wx:if='{{fromF}}'>
+  <!-- 好友助力 -->
+  <image src='/img/img/fish_frend.png' class='HappyFarm-game-content_help' bindtap='dropFriend'></image>
+  <!-- 浇水 水滴 -->
+  <image src='/img/img/fish_food.png' class='HappyFarm-game-drop' bindtap='dropFriend'></image>
+</block>
+<block wx:else>
+  <!-- 签到 -->
+  <image src='/img/img/fish_sign.png' class='HappyFarm-game-content_sign' bindtap='toSign'></image>
+  <!-- 好友助力 -->
+  <button class='HappyFarm-game-content_help' open-type="share" style='opacity:0;z-index: 1999;'></button>
+  <image src='/img/img/fish_frend.png' class='HappyFarm-game-content_help'></image>
+  <!-- 浇水 水滴 -->
+  <image src='/img/img/fish_food.png' class='HappyFarm-game-drop' bindtap='drop'></image>
+</block>
+
+<!-- 水滴动画效果 -->
+<block wx:if="{{waterCartoon}}">
+  <view class='HappyFarm-game-content_bg'></view>
+  <view class='HappyFarm-game-farm_water'>
+    <image src='/img/img/food.png' class='HappyFarm-game-farm_waterImg' style='opacity:{{waterOpcity}};top:{{waterTop}}rpx;' bindtouchmove="ballMoveEvent"></image>
+  </view>
+</block>
+
+<!-- 农场底部 -->
+<image src='/img/img/tb_help.png' class='HappyFarm-game-bottom_image'></image>
+<view class='HappyFarm-game-bottom'>
+  <scroll-view scroll-x class='HappyFarm-game-scroll-scroll_X'>
+    <!-- <view> -->
+    <view wx:for="{{friend}}" wx:key="tis" class='HappyFarm-game-scroll-scroll_X_view' wx:if='{{friend.length!=0}}'>
+      <view class='HappyFarm-game-scroll-scroll_X_image'>
+        <image src='{{item.avatar}}' data-opid='{{item.openid}}' bindtap='toFriFarm'></image>
+      </view>
+      <view class='HappyFarm-game-scroll-scroll_X_view_text'>{{item.nickname}}</view>
+    </view>
+    <!-- </view> -->
+    <view wx:if='{{friend.length==0}}' class='nofriend'>今天还没有好友来助力哦~</view>
+  </scroll-view>
+</view>
+
+<!--判断用户第一次进来选择种子 -->
+<!-- <view class='HappyFarm-game-Seedfarm' wx:if="{{Seedfarm}}">
+  <view class='HappyFarm-game-Seedfarm_viewContent'>
+    <image src='/img/img/Seedfarm.png' mode="widthFix">
+      <view class='HappyFarm-game-Seedfarm_viewContent_select'>
+        <image src="/img/img/1@2x.png" style='margin-left:60rpx;'></image>
+        <image src="/img/img/1@2x.png" style='margin-right:60rpx;'></image>
+        <view class='HappyFarm-game-Seedfarm_viewContent_click' bindtap='selectOnclick'>点击事件</view>
+      </view>
+    </image>
+  </view>
+</view> -->
+<!-- //签到弹框 -->
+<view class='signBox-shade' wx:if='{{sign}}'>
+  <view class='signBox'>
+    <image src='/img/img/farm_1food.png' bindtap='hideSign'></image>
+  </view>
+</view>
+<!-- //收获弹框 -->
+<view class='signBox-shade' wx:if='{{gain}}'>
+  <view class='gainBox'>
+    <image src='/img/img/gainFish.png' bindtap='chooseAddr'></image>
+  </view>
+</view>
+<!-- //助力成功弹框 -->
+<view class='signBox-shade' wx:if='{{friendSuc}}'>
+  <view class='friBox'>
+    <image src='/img/img/friendSucc.png' bindtap='toMyfarm'></image>
+  </view>
+</view>

@@ -1,0 +1,78 @@
+/* pages/mall/inmall/inmall.wxss */
+@import "/template/pubu/indexList.wxss";
+
+page{
+  background: #F7F7F7
+}
+.inMall_top{
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  padding:30rpx 30rpx 60rpx;
+  position: relative;
+}
+.inMall_tit{
+  width: 100%;
+  align-items: center;
+  margin-bottom: 30rpx;
+
+}
+.inMall_titImg{
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 20rpx;
+  align-items: center;
+  border-radius: 4rpx;
+}
+.inMall_titWoct{
+  font-size: 30rpx;
+  color: #fff;
+  margin-bottom: 20rpx
+}
+.inMall_titWocb{
+  font-size: 24rpx;
+  color: #efefef
+}
+/* //顶部内容 */
+.inMall_cont{
+  width: 100%;
+  overflow: hidden;
+  font-size: 26rpx;
+  color: #efefef;
+  display: -webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:2;
+ position: relative;
+ line-height: 50rpx;
+}
+.imgDow{
+  width: 20rpx;
+  height: 12rpx;
+  position: absolute;
+  right: 0;
+  bottom:35rpx;
+}
+.inMall_conMore{
+  -webkit-line-clamp:4;
+}
+/* //固定图片 */
+.topImg{
+  position: absolute;
+  bottom: -158rpx;
+  left: 0;
+  width:100%;
+  height: 192rpx;
+}
+.goodBox{
+  margin-top: 158rpx;
+  display: flex;
+  justify-content: space-between;
+  padding:20rpx 30rpx 30rpx;
+  width:100%;
+  flex-wrap: wrap;
+}
+.goods_none{
+  width: 100%;
+ text-align: center;
+}

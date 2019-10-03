@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/fish/fish",
+    "pages/about/about",
+    "pages/cart/orderdetail/orderdetail",
+    "pages/cart/orderdetail/goodsDetail/goodsDetail",
+    "pages/mine/mine",
+    "pages/mine/userinfo/userinfo",
+    "pages/mine/myMall/myMall",
+    "pages/mine/myMall/mallInfo/mallInfo",
+    "pages/mine/myMall/mallMoney/mallMoney",
+    "pages/mine/myMall/mallMoney/mallMoneyTx/mallMoneyTx",
+    "pages/mine/myMall/mallMoney/mallMoneyDet/mallMoneyDet",
+    "pages/mine/myMall/mallGoods/mallGoods",
+    "pages/mine/myMall/mallOrder/mallOrder",
+    "pages/mine/myMall/mallOrder/morderdetail/morderdetail",
+    "pages/mine/myMall/mallOrder/mallOsearch/mallOsearch",
+    "pages/mine/applyInto/applyInto",
+    "pages/mine/Allorders/Allorders",
+    "pages/mine/Allorders/orderdetail/orderdetail",
+    "pages/apply/notes/notes",
+    "pages/apply/success/success",
+    "pages/apply/verification/verification",
+    "pages/mine/userinfo/bindingnumber/bindingnumber",
+    "pages/index/search/search",
+    "pages/index/gDetail/gDetail",
+    "pages/mall/mall",
+    "pages/mall/inmall/inmall",
+    "pages/cart/success/success",
+    "pages/cart/fail/fail",
+    "pages/mine/wuliu/wuliu",
+    "pages/mine/wuliu/wuliuDetail/wuliuDetail",
+    "pages/mine/refund/refund",
+    "pages/mine/commodityInformation/commodityInformation",
+    "pages/shouquan/shouquan"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "开心农场",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#20A162",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/tab/tab_n_1.png",
+        "selectedIconPath": "imgs/tab/tab_s_1.png"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "商城",
+        "iconPath": "imgs/tab/tab_n_2.png",
+        "selectedIconPath": "imgs/tab/tab_s_2.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "imgs/tab/tab_n_3.png",
+        "selectedIconPath": "imgs/tab/tab_s_3.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "imgs/tab/tab_n_4.png",
+        "selectedIconPath": "imgs/tab/tab_s_4.png"
+      }
+    ]
+  }
+}

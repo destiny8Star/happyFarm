@@ -1,0 +1,323 @@
+/* pages/mine/Allorders/orderdetail/orderdetail.wxss */
+page{
+color:#666666;
+background:#f7f7f7;
+
+}
+ .order-cotainer{
+  margin-bottom: 100rpx;
+} 
+/* 1地址详情  */
+.order-site{
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.site-state{
+  padding-left: 24rpx;
+  height: 78rpx;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+.site-state>text{
+  color: #20A162;
+}
+.order-site .state-img{
+  width:20rpx;
+  height: 20rpx;
+  line-height:20rpx;
+
+  margin-right: 20rpx;
+}
+.order-site .state-img image{
+  width: 100%;
+  height: 100%;
+}
+.site-mess{
+  background-color: white;
+  /* margin-top: 20rpx; */
+}
+.site-title{
+  padding-left: 24rpx;
+  height: 78rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+   border-top: 1px solid #eeeeee;
+}
+.order-site .site-img{
+  width: 20rpx;
+  height:20rpx;
+  line-height: 20rpx;
+  margin-right: 20rpx;
+}
+.order-site .site-img image{
+  width: 100%;
+  height: 100%;
+}
+.site-box{
+  display: flex;
+  padding: 30rpx 24rpx;
+  align-items: center;
+}
+.order-site .site-middle{
+  flex: 1;
+  /* padding-left: 40rpx; */
+}
+.site-middle-top{
+  display: flex;
+  /* justify-content: space-between; */
+  margin-bottom: 10rpx;
+}
+
+.site-right{
+  width: 11rpx;
+  height: 20rpx;
+}
+.site-right image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 2订单信息 */
+.order-message{
+  padding-bottom: 20rpx;
+}
+.order-message .message-title{
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color:white;
+  padding-left: 20rpx; 
+  font-size: 32rpx;
+  color: #333333;
+}
+.order-message .message-title image{
+  width:20rpx;
+  height: 20rpx;
+  line-height:20rpx;
+  margin-right: 20rpx;
+}
+.circle_{
+   width:20rpx;
+  height: 20rpx;
+  line-height:20rpx;
+  margin-right: 20rpx;
+}
+.order-message .message-img-box{
+   height: 160rpx; 
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-top: 1rpx solid #f7f7f7;
+  justify-content: space-between
+  
+}
+.order-message .message-img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-right: 10rpx;
+}
+.order-message .message-center{
+  flex: 1;
+  padding-left: 20rpx;
+  padding-top: 5rpx; 
+}
+.order-message .message-center>view:first-child{
+  height: 60rpx;
+  line-height: 30rpx;
+  font-size: 25rpx;
+  margin-bottom: 17rpx;
+   margin-top: 7rpx; 
+  color: #333333;
+  padding-right: 60rpx;
+  overflow: hidden;
+
+}
+.order-message .message-center>view:nth-child(2){
+  font-size: 20rpx;
+}
+.order-message .message-center>view:last-child{
+  font-size: 25rpx;
+  color: #20A162;
+  margin-top: 48rpx;
+}
+
+.message-img image{
+  width: 100%;
+  height: 100%;
+}
+
+.message-right{
+  font-size: 24rpx;
+  color: #333;
+}
+
+/* 3配送方式 */
+.order-dist{
+  background-color: white;
+  font-size: 26rpx;
+}
+.order-dist .dist-list{
+  height: 80rpx;
+  padding: 0 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  color: #333333,
+}
+.order-dist .dist-list:last-child{
+  height: 80rpx;
+  padding: 0 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0;
+  color: #333333,
+}
+/* 4支付方式 */
+/* 4支付 */
+.order-pay{
+  margin-top: 20rpx;
+  background-color: white;
+  font-size: 30rpx;
+}
+.order-pay .pay-text{
+  /* line-height: 30rpx; */
+  padding:0 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+}
+.order-time:last-child{
+  border-bottom: 0
+}
+.time-list:last-child{
+   border-bottom: 0
+}
+.time-list{
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1rpx solid #EFEFEF
+}
+.order-pay .pay-text:first-child{
+  /* border-bottom: 1px solid #eeeeee; */
+  /* padding-right: 12rpx; */
+  margin-bottom: 20rpx;
+}
+.order-pay .pay-text .pay-text-min{
+  font-size: 22rpx;
+}
+.pay-choice{
+  height: 40rpx;
+}
+.pay-choice icon{
+  /* margin-top: 20rpx; */
+  height: 40rpx;
+}
+.pay-switch{
+   height: 44rpx;
+}
+.pay-switch .wx-switch-input-checked::after{
+  width:20px;
+  height: 20px;
+} 
+.pay-switch .wx-switch-input-checked{
+  width:40px;
+  height: 22px;
+}
+.pay-switch .wx-switch-input::after{
+  width:20px;
+  height: 20px;
+} 
+ .pay-switch .wx-switch-input:before{
+  width:40px;
+  height: 22px;
+} 
+ .pay-switch .wx-switch-input:before{
+  width:40px;
+  height: 22px;
+} 
+ .pay-switch .wx-switch-input{
+  width:40px;
+  height: 22px;
+} 
+/* 5留言 */
+.order-way{
+  height: 80rpx;
+  padding: 0 24rpx;
+  background-color: white;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+  color: #333333;
+}
+/* 5留言 */
+ .order-leave .leave-box{
+   font-size: 26rpx;
+   display: flex;
+   padding:22rpx 24rpx;
+   background-color: white;
+   margin-top: 20rpx;
+   border-bottom: 1px solid #eeeeee;
+ }
+  .order-leave .leave-box text{
+    margin-right: 10rpx;
+    width: 100rpx;
+  }
+/* 6时间列表 */
+.order-time{
+font-size:26rpx;
+background-color:white;
+line-height:44rpx;
+padding-left:31rpx;
+margin-bottom:140rpx;
+padding-right:31rpx;
+
+
+}
+/* 7提交订单 */
+.order-submit{
+  height: 100rpx;
+  display: flex;
+  font-size: 34rpx;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding:0 20rpx;
+  justify-content: space-between
+}
+ .submit-left{
+font-size: 28rpx;
+color: #333; 
+align-items: center
+}
+ .submit-right-t{
+ width:180rpx;
+height:60rpx;
+color:#ffffff;
+text-align:center;
+line-height:60rpx;
+margin-right:24rpx;
+font-size:26rpx;
+border:1px solid #839AAF;
+border-radius:8rpx;
+background:#20A162;
+
+}
+.btn_money{
+  font-size: 36rpx;
+  color: #20A162
+} 
+

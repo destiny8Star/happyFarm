@@ -1,0 +1,104 @@
+<!--pages/index/gDetail/gDetail.wxml-->
+<!-- banner图 -->
+<swiper class='detailBanner'  circular='true' indicator-dots='true' indicator-active-color='#20A162'>
+  <swiper-item wx:if='{{gdetail.video.length>0}}'>
+    <video class="slide-image"  src="{{gdetail.video[0]}}"></video>
+  </swiper-item>
+  <block wx:for="{{gdetail.image}}" wx:key='ind'>
+    <swiper-item>
+      <image src="{{item}}" class="slide-image {{index==changeSty?'changeSty':''}}" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- //内容 -->
+<view class='detailCont'>
+  <view class='detailCont_tit {{isLaunch?"isLaunch":""}}'>{{gdetail.introduce}}
+    <image src='/imgs/img/btnT.png' class='btnJ' bindtap='launch' wx:if='{{isLaunch}}'></image>
+    <image src='/imgs/img/btnB.png' class='btnJ' bindtap='launch' wx:else></image>
+  </view>
+  <view class='detailCont_con'>
+    <image wx:if='{{gdetail.store_type=="自营"}}' class='zyImg' src='/imgs/img/lable_zy.png'></image>
+    {{gdetail.goods_name}}
+  </view>
+  <view class='detailCont_price'>
+    <view class='detailCont_p'>￥{{gdetail.sell_price}}</view>
+    <view>已售{{gdetail.sell_num}}</view>
+  </view>
+</view>
+<!-- //商标 -->
+<view class='detailInd'>
+  <image src='/imgs/img/lable_ident.png'></image>
+</view>
+
+<!-- //店铺 -->
+<view class='mallBox' wx:if='{{gdetail.store_type!="自营"}}'>
+  <view class='mall'>
+    <view class='mall_tit flex_be'>
+      <view class='mall_titLeft flex'>
+        <image class='mall_pic' src='{{gdetail.store_avatar}}'></image>
+        <view>
+          <view class='mall_titLeftTit'>{{gdetail.store_name}}</view>
+          <view class='mall_titLeftCont'>{{gdetail.signature}}</view>
+        </view>
+      </view>
+      <!-- <view class='mall_titRight' bindtap='toMall' data-sid='{{gdetail.store_id}}'>进入店铺
+        <image src='/imgs/img/btn_next.png' class='mall_titRight_img'></image>
+      </view> -->
+    </view>
+    <!-- <view class='mallPic'>
+      <scroll-view class='mall_tab' scroll-x>
+         <view class='mallGoodsbox' wx:for='{{gdetail.recommend_goods}}' wx:key='good' wx:for-item='gitem' wx:for-index='gindex'>
+           <image src='{{gitem.image}}' mode='aspectFill' class='mall_tabItem' ></image>
+            <view class='mallPrice'>￥{{gitem.sell_price}}</view>
+        </view>
+      </scroll-view>
+    </view> -->
+  </view>
+</view>
+
+<!-- 图文介绍 -->
+<view class='wocpic'>
+  <view class='wocpic_tit'>
+    <image mode='widthFix' src='/imgs/img/title_detinfo.png'></image>
+  </view>
+  <view class='wocpic_tit' wx:for='{{gdetail.detail}}' wx:key='ind'>
+    <image mode='widthFix' src='{{item}}'></image>
+  </view>
+</view>
+
+<!-- //商品库 -->+
+<view class='store' bindtap='toMall' wx:if='{{userInfo.store_status==1&&userInfo.block==0}}' data-sid='{{gdetail.store_id}}'>
+  <image src='/imgs/img/btn_order.png'></image>
+</view>
+<!-- //底部 -->
+<view class='detBot'>
+  <view class='detBot_left'>
+    <image class='detBot_home' bindtap='indexInto' src='/imgs/img/btn_home.png'></image>
+    <image class='detBot_home' bindtap='toCart' src='/imgs/img/btn_cart.png'></image>
+  </view>
+  <!-- <view class='detBot_right'>
+       加入购物车
+   </view> -->
+  <view class='detBot_rightS' wx:if='{{userInfo.store_status==1&&userInfo.block==0}}'>
+    <view class='detBot_right_addCar' data-sid='{{gdetail.store_id}}' data-gid='{{gdetail.id}}' bindtap='joinCart'>加入购物车</view>
+    <view class='detBot_right_addShop' bindtap='showAgent'>我要代理TA</view>
+  </view>
+  <view class='detBot_rightS' wx:else>
+    <view class='detBot_right_addCar2' data-sid='{{gdetail.store_id}}' data-gid='{{gdetail.id}}' bindtap='joinCart'>加入购物车</view>
+  </view>
+</view>
+<!-- //代理价格 -->
+<view class='showBG' wx:if='{{showB}}' bindtap='hideAgent'>
+</view>
+<view class='showBox flex_clb' wx:if='{{showB}}'>
+  <view class='showBox_tit'>设置代理价</view>
+  <view class='showBox_price flex_be'>
+    <view class='showBox_pricel'>平台价：￥{{gdetail.price}}</view>
+    <view class='showBox_price2'>进货价：￥{{gdetail.stock_price}}</view>
+  </view>
+  <input class='showInput' type='digit' placeholder='请设置您的售价' bindinput='setMoney' placeholder-style='color:#ccc'></input>
+  <view class='showBtnbox flex'>
+    <view class='showBtnboxL' bindtap='hideAgent'>取消</view>
+    <view class='showBtnboxR' data-gid='{{gdetail.id}}' bindtap='dls'>确定</view>
+  </view>
+</view>

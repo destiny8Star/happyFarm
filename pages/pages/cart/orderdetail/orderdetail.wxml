@@ -1,0 +1,99 @@
+<!--pages/mine/Allorders/orderdetail/orderdetail.wxml-->
+<view>
+
+  <view class='order-cotainer'>
+    <!-- 1地址详情 -->
+    <view class='order-site'>
+      <view class='site-mess'>
+        <view class='site-title'>
+          <view class='site-img'>
+            <image src='/imgs/img/icon_circle.png'></image>
+          </view>
+          <text>收货信息</text>
+        </view>
+        <view class='site-box' bindtap='getAddress'>
+          <view class='site-middle'>
+            <view class='site-middle-top'>
+              <view class="name" style="margin-right:15rpx;">
+                收件人：
+                <text>{{name}}</text>
+              </view>
+              <view>
+                <text>（{{phone}}）</text>
+              </view>
+            </view>
+            <view class='site-middle-bottom'>
+              收货地址：
+              <text>{{address}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 2订单信息 -->
+    <view class='order-message'>
+      <view class='message-title flexa'>
+        <view class='site-img'>
+          <image src='/imgs/img/icon_circle.png'></image>
+        </view>
+        商品信息
+      </view>
+      <view style='background:#fff'>
+        <view class='message-img-box'>
+          <view class='imgBox flex' style='width:560rpx'>
+            <view class='message-img' wx:key="orderpay" wx:for="{{ordDetail.goods}}" wx:if='{{index<=4}}'>
+              <image mode="widthFix" src='{{item.image}}'></image>
+            </view>
+          </view>
+
+          <!-- <view class='message-center'>
+            <view>{{item.goods_name}}</view>
+            <view>￥{{item.sell_price}}</view>
+          </view> -->
+          <view class='message-right' bindtap='toGoods'>共{{ordDetail.sum}}件
+            <image src='/imgs/img/btn_next.png' style='width:11rpx;height:20rpx'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 3配送方式 -->
+    <view class='order-dist' style='color:#333333; border-bottom:0;'>
+      <view class='dist-list'>
+        <text>运费</text>
+        <text>￥{{freight}}</text>
+      </view>
+      <view class='dist-list'>
+        <text>商品金额</text>
+        <text>￥{{ordDetail.total}}</text>
+      </view>
+      <view class='dist-list'>
+        <text></text>
+        <view class='dist-list-text'>
+
+          <text>合计：</text>
+          <text style='color:#20A162; border-bottom:0;'>￥{{ordDetail.total+freight}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 4支付方式 -->
+    <view class='order-pay'>
+      <view class='pay-text'>
+        <view class='message-title flexa'>
+          <image class="circle_" src='/imgs/img/icon_circle.png'></image>
+          <text>支付方式</text>
+        </view>
+        <view class="pay-choice">
+          <image src="/imgs/img/wx_pay.png" style="width:129rpx;height:36rpx;"></image>
+          <!-- <text>微信支付</text> -->
+        </view>
+      </view>
+    </view>
+
+    <!-- 7提交订单 -->
+    <view class='order-submit'>
+      <view class='submit-left flex'>实付  <text class='btn_money'>￥{{ordDetail.total+freight}}</text></view>
+      <view  class='submit-right-t' bindtap='btnpayInto'>去支付</view>
+    </view>
+  </view>
+
+</view>

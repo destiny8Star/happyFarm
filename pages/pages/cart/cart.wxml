@@ -1,0 +1,91 @@
+<!--pages/cart/cart.wxml-->
+
+<view wx:if="{{carts.length!=0}}">
+  <view class="container carts-list">
+    <view class='List' wx:key="isshop" wx:for="{{carts}}">
+      <!-- //店铺 -->
+      <view class='MallName flex'>
+        <view class='selectSir'>
+          <icon wx:if="{{item.selected}}" type="success" color="rgba(32,161,98,1)" size="24" bindtap="MCheckbox" data-sid='{{item.id}}'data-index="{{index}}" />
+          <icon wx:else type="success" color="rgba(32,161,98,0.2)" size="24" bindtap="MCheckbox"data-sid='{{item.id}}' data-index="{{index}}" />
+        </view>
+        <view class='isZY'  wx:if='{{item.store_type=="自营"}}'>
+          <image src='/imgs/img/lable_zy.png'></image>
+        </view>
+        <view class='mallName'>{{item.store_name}}</view>
+        <view class='toMall'>
+          <image src='/imgs/img/arrow_.png'></image>
+        </view>
+      </view>
+      <view class="carts-item" wx:for='{{item.goods}}' wx:key='ing' wx:for-item='goods' wx:for-index='gindex'>
+        <view class="carts-choice">
+          <icon wx:if="{{goods.selected}}" type="success" color="rgba(32,161,98,1)" size="24" bindtap="GCheckbox" data-cid="{{goods.cart_id}}"data-index="{{gindex}}" data-mid='{{index}}' />
+          <icon wx:else type="success" color="rgba(32,161,98,0.2)" size="24" bindtap="GCheckbox"  data-cid="{{goods.cart_id}}" data-index="{{gindex}}" data-mid='{{index}}'/>
+        </view>
+        <view class="carts-image">
+          <image src="{{goods.image}}"></image>
+        </view>
+        <view class="carts-text">
+          <view class="carts-title">
+            <text>{{goods.goods_name}}</text>
+          </view>
+          <!-- <view class="carts-subtitle">
+          <text>{{item.price}}</text>
+        </view> -->
+          <!-- 加减号控制数量---------------------------------------- -->
+          <view class='stepper-box'>
+            <view>
+              <text>￥{{goods.sell_price}}</text>
+            </view>
+            <view class="stepper">
+              <!-- 减号 -->
+              <text class="disabled" wx:if="{{goods.num<=1}}">-</text>
+               <text wx:else data-id='{{goods.id}}' data-index="{{gindex}}" bindtap="bindMinus" data-cid='{{goods.cart_id}}' data-mid='{{index}}'>-</text>
+              <!-- 数值 -->
+              <input maxlength='4' disabled='true' class="number" type="number" data-index="{{gindex}}" data-id='{{goods.goodsid}}'  value="{{goods.num}}" />
+              <!-- 加号 -->
+              <text class="normal" data-index="{{gindex}}" data-id='{{goods.id}}'data-cid='{{goods.cart_id}}' data-mid='{{index}}'bindtap="bindPlus">+</text>
+            </view>
+          </view>
+        </view>
+        <view class="delete">
+          <view class="delete-img" bindtap="deleteList" data-cid='{{goods.cart_id}}' data-index="{{gindex}}">
+            <image src="/imgs/img/delete.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 全选和结算---------------------------------------- -->
+  <view class="carts-footer">
+    <view class="all-chioce">
+      <view class="footer-left">
+        <icon wx:if="{{selectedAllStatus}}" type="success" color="rgba(32,161,98,1)" size="24" bindtap="bindSelectAll" />
+        <icon wx:else type="success" color="rgba(32,161,98,0.2)" size="24" bindtap="bindSelectAll" />
+        <text style='color:#5c5c5c'>全选</text>
+      </view>
+      <view class="footer-right">
+        <view class="right-text">
+          <text style='color:#333333'>合计</text>
+          <text>{{total}}</text>
+        </view>
+        <!-- <view class="free">
+          <text style='font-size:24rpx;'>不含运费</text>
+        </view> -->
+      </view>
+    </view>
+    <view class="button" bindtap="orderInto">结算</view>
+  </view>
+</view>
+<!-- 购物车缺省页 -->
+<view wx:else class="carts-default">
+  <view>
+    <view class='default-img'>
+      <image src='/imgs/img/default_cart.png'></image>
+    </view>
+    <text style="color:#999999">购物车是空的哦~</text>
+    <view bindtap="tobackHome" class="back-box flexca">
+      <text>去添加商品</text>
+    </view>
+  </view>
+</view>

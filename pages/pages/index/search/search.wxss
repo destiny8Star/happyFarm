@@ -1,0 +1,105 @@
+@import "/template/pubu/indexList.wxss";
+page{
+  background: #f7f7f7
+}
+.header {
+  position: fixed;
+  top:0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100rpx;
+  border-top: 1rpx solid #F7F7F7;
+  border-bottom: 1rpx solid #F7F7F7;
+  justify-content: space-around;
+  background: #fff;
+  width:100%
+
+}
+.search_box {
+  width: 570rpx;
+  height: 65rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #F7F7F7;
+  border-radius: 10rpx;
+}
+icon {
+  margin-left: 20rpx;
+}
+.search_a{
+margin-right:10px;
+width:16px;
+height:16px;
+vertical-align:middle;
+margin-left:35rpx;
+
+
+}
+input {
+  width: 470rpx;
+  font-size: 30rpx;
+  padding-left: 10rpx;
+}
+.s_btn {
+  font-size: 32rpx;
+  line-height: 25px;
+  width: 100rpx;
+  text-align: center;
+  color: #20A162
+}
+button::after{
+  display: none;
+}
+/*热门  */
+.hotbox{
+  width: 100%;
+  height: 100vh;
+  padding:120rpx 30rpx 30rpx;
+  /* padding-bottom: 20rpx; */
+  background: #fff
+}
+.title{
+height:54rpx;
+font-size:32rpx;
+color:#333333;
+/* font-weight:bold; */
+}
+.title2{
+height:54rpx;
+font-size:26rpx;
+color:#ccc;
+font-weight:bold;
+line-height: 54rpx;
+}
+button{
+  background: #ffffff;
+}
+.hotmak{
+  /* width: 120rpx; */
+  padding: 0 18rpx;
+  height: 50rpx;
+  background: rgba(32,161,98,.1);
+  border-radius: 12rpx;
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+  line-height: 48rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx
+
+}
+.market{
+  padding-top: 30rpx;
+  padding-bottom: 50rpx
+}
+/* //列表商品 */
+.goodsList{
+  display: flex;
+  justify-content: space-between;
+  padding:130rpx 30rpx 30rpx;
+  width:100%;
+  flex-wrap: wrap;
+}

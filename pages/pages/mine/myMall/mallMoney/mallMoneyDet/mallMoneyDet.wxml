@@ -1,0 +1,23 @@
+<!--pages/mine/myMall/mallMoney/mallMoneyDet/mallMoneyDet.wxml-->
+<view class='detail'>
+  <view class='detTit flex_be'>
+     <text class='detTita'>交易金额(元)</text>
+     <text class='detTitb'>-200.00</text>
+  </view> 
+  <view class='detCon flex_be'>
+     <text class='detCona'>交易类型</text>
+     <text class='detConb'>余额提现</text>
+  </view> 
+   <view class='detCon flex_be'>
+     <text class='detCona'>交易时间</text>
+     <text class='detConb'>2018-12-08 12:28:26</text>
+  </view> 
+   <view class='detCon flex_be'>
+     <text class='detCona'>流水单号</text>
+     <text class='detConb'>123456789987654</text>
+  </view> 
+   <view class='detCon flex_be'>
+     <text class='detCona'>备注</text>
+     <text class='detConb'>微信支付</text>
+  </view> 
+</view>

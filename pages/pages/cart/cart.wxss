@@ -1,0 +1,343 @@
+/* pages/cart/cart.wxss */
+image{
+  display: block
+}
+page {
+  width: 100%;
+  height: auto;
+  background: #f7f7f7;
+} 
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.List{
+  width: 100%;
+  background: #fff;
+
+}
+/*店铺顶部*/
+.MallName{
+  width: 100%;
+  border-bottom: 1rpx solid #f7f7f7;
+  padding:0 30rpx;
+  align-items: center;
+  height: 88rpx;
+}
+.selectSir{
+  margin-right: 30rpx;
+}
+.mallName{
+  margin-right:20rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.isZY{
+  margin-right: 20rpx;
+  width: 50rpx;
+  height: 30rpx;
+}
+.toMall{
+  width: 8rpx;
+  height: 14rpx;
+}
+/*整体列表*/
+
+.carts-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 120rpx;
+  border-top: 1rpx solid #f7f7f7
+}
+
+/*每行单元格*/
+
+.carts-item {
+  display: flex;
+  flex-direction: row;
+  height: 200rpx;
+  /*width属性解决标题文字太短而缩略图偏移*/
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 1px;
+  position: relative;
+}
+
+/* 对号图标 */
+
+.carts-choice {
+  margin-right: 12rpx;
+  margin-left: 30rpx;
+}
+
+/*左部图片*/
+
+.carts-image {
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.carts-image image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+/*右上部分标题*/
+
+.carts-text {
+  flex: 1;
+  padding-right: 24rpx;
+}
+
+.carts-title {
+  width: 405rpx;
+  color: #272727;
+  font-size: 26rpx;
+  padding-right: 40rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/*右下部分价格与数量*/
+
+.carts-subtitle {
+  font-size: 25rpx;
+  color: #a0a0a0;
+  margin-top: 20rpx;
+  /* margin: 20rpx 0 20rpx; */
+}
+
+/*加减号控制数量*/
+
+.stepper-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15rpx;
+}
+
+.stepper-box>view:first-child {
+  color: #a0a0a0;
+  font-size: 22rpx;
+  margin-top: 15rpx;
+}
+
+.stepper-box>view:first-child text {
+  color: #20A162;
+  font-size: 32rpx;
+}
+
+.stepper {
+  display: flex;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10rpx;
+  width: 140rpx;
+  margin-right: 22rpx;
+}
+
+.stepper text {
+  display: block;
+  width: 52rpx;
+  height: 54rpx;
+  border: 1px solid #ddd;
+  /* line-height: 50rpx; */
+  color: #ccc;
+}
+
+.stepper text.normal {
+  border: 1px solid rgba(221, 221, 221, 1);
+}
+
+.stepper text.disabled {
+  border: 1px solid rgba(221, 221, 221, 0.3);
+}
+
+.stepper .number {
+  width: 100rpx;
+  font-size: 28rpx;
+  height: 55rpx;
+  border: 1px solid #ddd;
+  line-height: 55rpx;
+  color: #333;
+}
+
+.stepper text:first-child {
+  border-right: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.stepper text:last-child {
+  border-left: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.carts-list .delete {
+  /* height: 100%; */
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.delete-img {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 34rpx;
+  margin-top: 25rpx;
+}
+
+.delete-img image {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+/* 全选和区结算按钮 ********************************/
+
+/*底部按钮*/
+
+.carts-footer {
+  width: 100%;
+  height: 98rpx;
+  display: flex;
+  /* flex-direction: row; *//* justify-content: space-between; */
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/*复选框*/
+
+.carts-footer icon {
+  margin-left: 30rpx;
+  margin-right: 15rpx;
+}
+
+/*全选字样*/
+
+.carts-footer text {
+  font-size: 30rpx;
+  margin-left: 8rpx;
+  line-height: 10rpx;
+}
+
+.all-chioce {
+  height: 100%;
+  /* border-top: 1px solid #dddddd;  */
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left {
+  width: 190rpx;
+  display: flex;
+  align-items: center;
+}
+
+.footer-right {
+  padding-right: 40rpx;
+  flex: 1;
+  direction: rtl;
+}
+
+.right-text {
+  /* line-height: 70rpx; */
+  margin-top: 25rpx;
+}
+
+.right-text text:last-child {
+  color: #20A162;
+}
+
+/* .right-text{ */
+
+/* margin-bottom: 10rpx; */
+
+/* } */
+
+.footer-right .free {
+  font-size: 20rpx;
+  color: #ccc;
+}
+
+/*立即结算按钮*/
+
+.carts-footer .button {
+line-height:120rpx;
+text-align:center;
+width:260rpx;
+background:#20A162;
+color:white;
+font-size:32rpx;
+border:0;
+overflow:hidden;
+height:120rpx;
+
+
+}
+
+/* 全选和区结算按钮 ********************************/
+
+/* 购物车缺省页************** */
+
+.carts-default {
+  width: 100%;
+  height: 1000rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  border-top: 2px solid #f7f7f7;
+}
+
+.carts-default view {
+  text-align: center;
+}
+
+.default-img {
+  margin: 0 auto;
+  margin-bottom: 50rpx;
+}
+
+.carts-default .default-img {
+width:300rpx;
+height:300rpx;
+
+}
+
+.carts-default .default-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.carts-default .back-box {
+width:409rpx;
+height:65rpx;
+background:#20A162;
+border-radius:6rpx;
+margin-top:50rpx;
+line-height:65rpx;
+
+}
+
+.carts-default .back-box text {
+  font-size: 30rpx;
+  color: white;
+}

@@ -1,0 +1,48 @@
+<!--pages/cart//orderdetail/goodsDetail/goodsDetail.wxml-->
+<view class='box'>
+  <view class='item' wx:for='{{goodList}}' wx:key='ind'>
+    <view class='item-top flex'>
+      <view class="isZY" wx:if='{{item.store_type=="自营"}}'>
+        <image src="/imgs/img/lable_zy.png"></image>
+      </view>
+      <view class="mallName">{{item.store_name}}</view>
+      <view class="toMall">
+        <image src="/imgs/img/arrow_.png">
+        </image>
+      </view>
+    </view>
+    <view class='item-bottom flex_be' wx:for='{{item.goods}}' wx:key='gind' wx:for-item='gitem'>
+        <view class='item-bottom-img'><image src='{{gitem.image}}'></image></view>
+        <view class='item-bottom-content'>
+            <view class='item-bot-con'>{{gitem.goods_name}}</view>
+            <view class='item-bot-con2 flex_be'>
+                <view class='item-bot-con2a'>￥{{gitem.sell_price}}</view>
+                <view class='item-bot-con2b'>x{{gitem.num}}</view>
+            </view>
+        </view>
+    </view>
+  </view>
+
+  <view class='item'wx:if='{{mgoodList}}'>
+    <view class='item-top flex'>
+      <view class="isZY" wx:if='{{mgoodList.store_type=="自营"}}'>
+        <image src="/imgs/img/lable_zy.png"></image>
+      </view>
+      <view class="mallName">{{mgoodList.store_name}}</view>
+      <view class="toMall">
+        <image src="/imgs/img/arrow_.png">
+        </image>
+      </view>
+    </view>
+    <view class='item-bottom flex_be' wx:for='{{mgoodList.goods}}' wx:key='gind' wx:for-item='gitem'>
+        <view class='item-bottom-img'><image src='{{gitem.image}}'></image></view>
+        <view class='item-bottom-content'>
+            <view class='item-bot-con'>{{gitem.goods_name}}</view>
+            <view class='item-bot-con2 flex_be'>
+                <view class='item-bot-con2a'>￥{{gitem.price}}</view>
+                <view class='item-bot-con2b'>x{{gitem.num}}</view>
+            </view>
+        </view>
+    </view>
+  </view>
+</view>

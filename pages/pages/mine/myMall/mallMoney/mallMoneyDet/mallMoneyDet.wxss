@@ -1,0 +1,44 @@
+/* pages/mine/myMall/mallMoney/mallMoneyDet/mallMoneyDet.wxss */
+page{
+  background: #f7f7f7
+}
+.detail{
+    width: 690rpx;
+    height: 530rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 10% auto;
+  background-color: #fff;
+  border-radius: 36rpx;
+  padding:50rpx 40rpx;
+  box-shadow: 0 0 30rpx 10rpx rgba(102,102,102,0.15)
+}
+.detTit{
+  width: 100%;
+  padding-bottom: 40rpx;
+  border-bottom: 1rpx solid #efefef;
+  align-items: center
+}
+.detTita{
+  font-size: 32rpx;
+  color: #333;
+}
+.detTitb{
+  font-size: 60rpx;
+  color: #EE3F4D;
+}
+.detCon{
+  width: 100%;
+  align-items: center;
+  font-size: 28rpx;
+  margin:40rpx 0;
+}
+.detCona{
+  color: #999;
+}
+.detConb{
+  color: #333;
+}

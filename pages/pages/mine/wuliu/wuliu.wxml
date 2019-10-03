@@ -1,0 +1,32 @@
+<!--pages/mine/wuliu/wuliu.wxml-->
+<view class="main" wx:for='{{info}}' wx:key='ind'>
+  <view class="top">
+    <view class="company">物流信息：
+      <text class="name">{{item.express_company}}</text>
+    </view>
+    <view class="ordernumber">物流单号：
+      <text class="name">{{item.express_no}}</text>
+    </view>
+    <view class="copy" bindtap='toTransDetail' data-num="{{item.express_no}}" data-img='{{item.express_icon}}' data-name='{{item.express_company}}'>查看详情</view>
+  </view>
+  <view class="outbox">
+    <view class="listbox flex" wx:for="{{item.goods}}" wx:key="unique" wx:for-item='gitem'>
+      <view class="left">
+        <image src="{{gitem.image}}"></image>
+      </view>
+      <view class="right">
+        <view class="title">{{gitem.goods_name}}</view>
+        <view class="price">
+          <text class="now_price">￥{{gitem.price}}</text>
+          <!-- <text class="originalprice">￥{{gitem.oldprice}}</text> -->
+          <text class="num">X{{gitem.num}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<view class="zanwu" wx:if="{{!info}}">
+  <image src="/imgs/img/search_n.png" style="width:300rpx;height:300rpx;"></image>
+  <view>该订单暂无物流信息</view>
+</view>

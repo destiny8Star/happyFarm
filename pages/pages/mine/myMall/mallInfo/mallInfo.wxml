@@ -1,0 +1,42 @@
+<!--pages/mine/myMall/mallInfo/mallInfo.wxml-->
+<form bindsubmit='formSubmit'>
+    <view class='contain'>
+        <view class='inputs-head flexba'>
+          <view>
+            <text>店铺头像</text>
+            <text class='f22' style='color:#FF4427;font-size:28rpx;'>*可修改</text>
+          </view>
+          <view class='flexa' bindtap='headImg'>
+            <view class='user-pic'>
+              <image mode='aspectFit'  src='{{mallInfo.store_avatar}}'></image>
+            </view>
+          </view>
+        </view>
+        <!-- 名字 -->
+        <view class="section">
+          <view class="section__title">店铺名称</view>
+          <view class="right_name">{{mallInfo.store_name}}</view>
+        </view>
+            <!-- 名字 -->
+        <view class="section">
+          <view class="section__title">平台认证</view>
+         <image class='ptrz' wx:if='{{mallInfo.grade==1}}' src='/imgs/img/lv1.png'></image>
+        <image class='ptrz' wx:elif='{{mallInfo.grade==2}}' src='/imgs/img/lv2.png'></image>
+        <image class='ptrz' wx:else src='/imgs/img/lv3.png'></image>
+        </view>
+        <!-- 公司电话 -->
+        <view class="section">
+          <view class="section__title">联系电话</view>
+          <input name="mobile" placeholder='请输入电话' value='{{mallInfo.phone}}'type='number' maxlength='11' disabled='true'></input>
+        </view>
+        <!-- 店铺简介 -->
+        <view class='mallShort'>
+           <view class='mallShort_tit'>店铺简介</view>
+           <textarea class='mallShort_cont' name='textShore'placeholder='请输入店铺简介' value='{{mallInfo.signature}}'></textarea>
+        </view>
+    </view>
+        <!-- 提交 -->
+    <view class='section btns'>
+      <button class='btn' form-type='submit'>提交</button>
+    </view>
+</form>

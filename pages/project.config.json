@@ -1,0 +1,98 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
+	"appid": "wx47dd0a081d4de706",
+	"projectname": "%E5%BC%80%E5%BF%83%E5%86%9C%E5%9C%BA",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": 0,
+					"name": "商品详情",
+					"pathName": "pages/shouquan/shouquan",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/mall/mall",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的店铺",
+					"pathName": "pages/mine/myMall/myMall",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/cart/cart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "成功",
+					"pathName": "pages/apply/success/success",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购物车商品列表",
+					"pathName": "pages/cart/orderdetail/goodsDetail/goodsDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "物流详情",
+					"pathName": "pages/mine/wuliu/wuliuDetail/wuliuDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "农场游戏",
+					"pathName": "pages/about/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "鱼",
+					"pathName": "pages/fish/fish"
+				}
+			]
+		}
+	}
+}

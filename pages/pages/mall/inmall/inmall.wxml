@@ -1,0 +1,36 @@
+<!--pages/mall/inmall/inmall.wxml-->
+<import src='/template/pubu/indexList.wxml' />
+<view class='inMall_top' style="background-image:url('{{mallDetail.background}}')">
+   <view class='inMall_tit flex'>
+       <image src='{{mallDetail.store_avatar}}' class='inMall_titImg'></image>
+       <view class='inMall_titWoc'>
+          <view class='inMall_titWoct'>{{mallDetail.store_name}}</view>
+          <view class='inMall_titWocb'>全部商品：{{mallDetail.goods_num}}</view>
+       </view>
+   </view>
+   <view class='inMall_cont {{dowImg?"":"inMall_conMore"}}'>
+        {{mallDetail.signature}}
+       <view class='imgDow' wx:if='{{dowImg}}' bindtap='topBtn'><image src='/imgs/img/btn_down.png'></image></view>
+       <view class='imgDow' wx:if='{{!dowImg}}'  bindtap='topBtn'><image src='/imgs/img/btn_top.png'></image></view>
+   </view>
+   <view class='topImg'><image src='/imgs/img/title_list.png'></image></view>
+
+</view>
+<!-- //商品列表 -->
+<view class='goodBox'>
+  <view class='goods_left'>
+    <block wx:for='{{goodslist}}' wx:key='ind' wx:if='{{index%2==0}}'>
+      <template is='indexList' data="{{...item}}" />
+    </block>
+  </view>
+  <view class='goods_right'>
+    <block wx:for='{{goodslist}}' wx:key='ind' wx:if='{{index%2==1}}'>
+      <template is='indexList' data="{{...item}}" />
+    </block>
+  </view>
+  <h1 class='goods_none' wx:if='{{goodslist.length==0}}'>暂无代理商品</h1>
+</view>
+<!-- //上来加载 -->
+<view class='page-add-data flexca'>
+  <text>{{pageTottomText}}</text>
+</view>

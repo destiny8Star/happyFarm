@@ -1,0 +1,14 @@
+<!--pages/cart/success/success.wxml-->
+<view class="main">
+
+  <image src="/imgs/img/success.png"></image>
+
+  <view class="title">订单支付成功</view>
+  <view class="price">-￥1388.0</view>
+  <view class="statu">仓库正在为您备货中</view>
+  
+  <view class="btn_box">
+  <view class="left">回到首页</view>
+  <view class="right">查看订单</view>
+  </view>
+</view>

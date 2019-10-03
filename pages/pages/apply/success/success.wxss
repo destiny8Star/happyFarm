@@ -1,0 +1,28 @@
+/* pages/apply/success/success.wxss */
+.sendSucImg{
+  width: 200rpx;
+  height: 200rpx;
+  margin:100rpx auto 40rpx;
+}
+h1{
+  font-size: 40rpx;
+  color: #333;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+}
+h4{
+ font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  display: block;
+  margin: 40rpx 0 100rpx;
+}
+.btn{
+  width:690rpx;
+height:88rpx;
+background:rgba(32,161,98,1);
+border-radius:8rpx;
+font-size: 32rpx;
+color: #fff;
+}

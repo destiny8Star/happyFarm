@@ -1,0 +1,92 @@
+<!--pages/mine/mine.wxml-->
+<view class="topimg">
+  <image src="/imgs/img/bg_me.png"></image>
+</view>
+
+<view class="main">
+  <image class="user_img" src="{{userInfo.avatar}}"></image>
+  <view class="username">{{userInfo.nickname}}</view>
+
+  <view class="look" bindtap='userinfo'>查看并修改个人信息
+    <image style="width:8rpx;height:15rpx;" src="/imgs/img/arrow.png"></image>
+  </view>
+
+  <view class="outbox">
+    <view class="my_pin">
+      <view class="my">我的订单</view>
+      <view class="more" bindtap='moreInto' data-id='0'>全部订单
+        <image style="width:8rpx;height:15rpx;margin-left:10rpx;" src="/imgs/img/arrow_.png"></image>
+      </view>
+    </view>
+    <view class='flex_ar navbox'>
+      <view class=' onenav' wx:for='{{navtop}}' wx:key='{{list}}' data-id='{{item.id}}' bindtap='moreInto' data-index="{{index}}" data-name="{{item.menu_name}}">
+        <image src='{{item.icon}}'></image>
+        <text class="menu_name">{{item.menu_name}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- //店铺未审核通过 -->
+<view class="partthree" wx:if="{{userInfo.store_status==0||userInfo.store_status==2||userInfo.store_status==3}}">
+  <view class="third-card">
+    <view class="item flexba" bindtap="detailInto" wx:for="{{itemarray}}" wx:key="key" data-id='{{item.id}}'>
+      <view>
+        {{item.name}}</view>
+      <image class="arrow_icon" src='{{item.imgss}}'></image>
+    </view>
+  </view>
+</view>
+<!-- //店铺审核通过 -->
+<view class="partthree" wx:if="{{userInfo.store_status==1&&userInfo.block==0}}">
+  <view class="third-card">
+    <view class="item flexba" bindtap="detailInto" wx:for="{{itemarray1}}" wx:key="key" data-id='{{item.id}}'>
+      <view>{{item.name}}</view>
+      <view style="margin-left:250rpx;color:#999999;font-size:24rpx;">{{item.yongjin}}</view>
+      <image class="arrow_icon" src='{{item.imgss}}'></image>
+    </view>
+  </view>
+</view>
+<!-- //店铺被冻结 -->
+<view class="partthree" wx:if="{{userInfo.store_status==1&&userInfo.block==1}}">
+  <view class="third-card">
+    <view class="item flexba" bindtap="detailInto" wx:for="{{itemarray2}}" wx:key="key" data-id='{{item.id}}'>
+      <view>{{item.name}}</view>
+      <view style="margin-left:35rpx;color:#e60013;font-size:24rpx;">{{item.yongjin}}</view>
+      <image class="arrow_icon" src='{{item.imgss}}'></image>
+    </view>
+  </view>
+</view>
+<!-- //店铺审核中或 -->
+<view class="partthree four" wx:if="{{userInfo.store_status==0}}">
+  <view class="third-card four-card">
+    <view class="item flexba">
+      <view>
+        招商代理</view>
+      <view class="apply" bindtap='applyInto'>申请成为代理</view>
+    </view>
+    <view class="titl">和好友分享代理商品，赚取佣金</view>
+
+  </view>
+</view>
+<view class="partthree four" wx:if="{{userInfo.store_status==2}}">
+  <view class="third-card four-card">
+    <view class="item flexba">
+      <view>
+        招商代理</view>
+      <view class="apply" bindtap='tosuccess'>正在审核..</view>
+    </view>
+    <view class="titl">和好友分享代理商品，赚取佣金</view>
+
+  </view>
+</view>
+<view class="partthree four" wx:if="{{userInfo.store_status==3}}">
+  <view class="third-card four-card">
+    <view class="item flexba">
+      <view>
+        招商代理</view>
+      <view class="apply" bindtap='applyInto'>审核未通过</view>
+    </view>
+    <view class="titl" style="color:#e60013;">未通过原因：{{userInfo.cause}}</view>
+
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<template name="indexList">
+  <view class='indexItem' bindtap='toDetail' data-id='{{id}}'>
+     <image src='{{image}}' mode='widthFix' class='indexItem_image'></image>
+     <view class='indexItem_bot'>
+         <view class='indexItem_botTit'>
+            <image src='/imgs/img/lable_zy.png' class='indexItem_botTitImg'></image>
+            <view class='indexItem_botTitName'>{{goods_name}}</view>
+         </view>
+         <view class='indexItem_botTitCont'>{{introduce}}</view>
+         <view class='indexItem_botTitPrice'>
+            ￥{{price||sell_price}}
+            <image src='/imgs/img/btn_addToCart.png' class='indexItem_botTitImg2' data-sid='{{store_id}}' data-gid='{{id}}' catchtap='joinCart'></image>
+         </view>
+     </view>
+  </view>
+</template>

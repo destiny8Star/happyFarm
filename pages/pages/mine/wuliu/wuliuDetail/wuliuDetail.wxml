@@ -1,0 +1,25 @@
+<!--pages/mine/wuliu/wuliuDetail/wuliuDetail.wxml-->
+<view class='title'>
+   <view class='titBox flex'>
+       <image class='image' src='{{img}}'></image>
+       <view class='tit-text'>
+          <view class='text1'>{{name}}</view>
+          <view class='text2'>物流单号：{{num}}</view>
+
+      </view>
+   </view>
+</view>
+
+<view class='content'>
+  <view class='itemBox flex' wx:for='{{detail}}' wx:key='ind'>
+      <view class='itemL'>
+         <view class='date'>{{item.AcceptTime}}</view>
+         <!-- <view class='time'>11:45</view> -->
+      </view>
+      <view class='itemR'>
+         <view class='cricle'></view>
+        {{item.AcceptStation}}
+      </view>
+  </view>
+  
+</view>

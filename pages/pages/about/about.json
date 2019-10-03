@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "wux-white-space": "../../wux/white-space/index",
+    "wux-button": "../../wux/button/index",
+    "wux-progress": "../../wux/progress/index"
+  }
+}

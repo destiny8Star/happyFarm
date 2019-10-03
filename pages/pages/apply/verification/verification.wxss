@@ -1,0 +1,355 @@
+/* pages/apply/verification/verification.wxss */
+@import 'vip.wxss';
+
+.shop {
+  width: 100%;
+  align-items: center;
+  height: auto;
+}
+
+.shoptext {
+margin-top:25rpx;
+font-size:46rpx;
+color:#333;
+margin-left:30rpx;
+width:100%;
+
+}
+
+.shopContent {
+  margin-top: 25rpx;
+  margin-left: 30rpx;
+  font-size: 24rpx;
+  color: #999;
+  padding-bottom: 25rpx;
+}
+
+.f28 {
+  font-size: 28rpx;
+  color: #333;
+  margin-right: 20rpx;
+}
+
+.inputs {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-box {
+  justify-content: space-between;
+  width: 90%;
+  height: 89rpx;
+  border-bottom: 1rpx solid #efefef;
+}
+
+.input-img {
+  width: 90%;
+  height: 89rpx;
+}
+
+input {
+  text-align: right;
+  font-size: 28rpx;
+}
+
+.right-right {
+  width: 11rpx;
+  height: 19rpx;
+  position: absolute;
+  right: 40rpx;
+}
+
+.right-right1 {
+  width: 11rpx;
+  height: 19rpx;
+  right: 40rpx;
+}
+
+.up-pic {
+  /* padding:20rpx 24rpx; */
+  width: 100%;
+  justify-content: center;
+}
+
+.pic-box {
+  flex-flow: wrap;
+  width: 95%;
+  /* justify-content: center; */
+}
+
+.ap-box {
+  position: relative;
+}
+
+.add-pic {
+  width: 270rpx;
+  height: 270rpx;
+  margin-right: 20rpx;
+  position: relative;
+  margin: 20rpx 30rpx 20rpx 30rpx;
+  margin-top: 15rpx;
+}
+
+/* 删除图片 */
+
+.img-de {
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: -50rpx;
+  top: -4rpx;
+}
+
+.delates {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+button {
+  margin: 50rpx auto;
+  width: 690rpx;
+  height: 80rpx;
+  background: #20a162;
+  border-radius: 8rpx;
+  color: #fff;
+  line-height: 80rpx;
+}
+
+/* .section {
+  margin-right:23rpx;
+} */
+
+.img {
+  width: 270rpx;
+  height: 270rpx;
+}
+
+.phoneright {
+  float: right;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.phone {
+  line-height: 88rpx;
+}
+
+.phone28 {
+  float: left;
+}
+
+/* 日期选择 */
+
+.picker_group {
+  height: 85rpx;
+  line-height: 85rpx;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #888;
+  width: 275rpx;
+}
+
+.picker_group picker {
+  /* background-color: yellow; */
+  color: #000;
+  height: 55rpx;
+  line-height: 55rpx;
+  /* margin: 0 2%; *//* padding: 0 2%; */
+}
+
+.flex {
+  display: flex;
+}
+
+.flexc {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexw {
+  display: flex;
+  /* word-wrap: wrap; */
+  flex-wrap: wrap;
+}
+
+.flexjc {
+  display: flex;
+  justify-content: center;
+}
+
+.flexac {
+  display: flex;
+  align-items: center;
+}
+
+.flexjc {
+  display: flex;
+  justify-content: center;
+}
+
+.flexjac {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs-box {
+  height: 88rpx;
+  padding: 0 24rpx;
+  border-bottom: 1px solid #f7f7f7;
+  background-color: #fff;
+  font-size: 30rpx;
+  color: #333;
+}
+
+
+.orinfo {
+  width: 90%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #f7f7f7;
+  font-size: 28rpx;
+  color: #343434;
+}
+
+
+.jian {
+  width: 40rpx;
+  height: 40rpx;
+  background: #feca2f;
+  text-align: center;
+  line-height: 40rpx;
+  color: #fff;
+  border-radius: 8rpx;
+  margin: auto;
+  margin-right: 10rpx;
+}
+
+.color {
+  color: #ff4427;
+}
+
+.rigthimage {
+ width:11rpx;
+height:20rpx;
+margin:auto;
+margin-left:20rpx;
+
+}
+.righticon{
+   width:11rpx;
+height:20rpx;
+}
+
+.address {
+  display: block;
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 20rpx;
+}
+
+/*添加图片  */
+
+.upload_title {
+  width: 100%;
+  height: 27rpx;
+  line-height: 27rpx;
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  margin-left: 35rpx;
+}
+
+.media {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.delate_f {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: -20rpx;
+  margin-bottom: 150rpx;
+}
+
+.delate_r {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: -20rpx;
+  margin-bottom: 160rpx;
+}
+
+.showimgs_f {
+  width: 200rpx;
+  height: 200rpx;
+  float: left;
+  /* margin-left: 10rpx; */
+}
+
+.showimgs_ff {
+  width: 190rpx;
+  height: 190rpx;
+  float: left;
+  margin: 10px;
+}
+
+.showimgs_r {
+  width: 300rpx;
+  height: 190rpx;
+  /* float: left;
+  margin-left: 50rpx; */
+}
+
+.addimg image {
+  width: 300rpx;
+  height: 190rpx;
+  /* margin: auto;
+  margin-bottom: 10rpx;
+  margin-right: 20rpx; */
+}
+
+.addimg_r {
+  /* margin-left: 37rpx; */
+}
+
+.addimg_r image {
+  width: 300rpx;
+  height: 190rpx;
+  margin: auto;
+  /* margin-bottom: 10rpx; */
+  /* margin-top:40rpx; */
+  /* margin-right: 20rpx; */
+}
+
+.myaddress {
+  width: 500rpx;
+  height: 100rpx;
+  margin-top: 20rpx;
+}
+
+.addimg {
+  /* margin-left: 15rpx;
+  margin-right: 22rpx; */
+}
+
+/* map  */
+
+.tip {
+  font-size: 28rpx;
+  color: #333;
+  margin-right: 25rpx;
+  max-width: 366rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

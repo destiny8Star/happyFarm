@@ -1,0 +1,48 @@
+<!--pages/mall/mall.wxml-->
+<!--引入模板-->
+<import src='/template/pubu/indexList.wxml' />
+<!-- //店铺 -->
+<view class='mallBox'>
+  <view class='mall' wx:for='{{mallList}}' wx:key='idn'>
+    <view class='mall_tit flex_be'  bindtap='toMall' data-sid='{{item.id}}'>
+      <view class='mall_titLeft flex'>
+        <image class='mall_pic' src='{{item.store_avatar}}'></image>
+        <view>
+          <view class='mall_titLeftTit'>{{item.store_name}}</view>
+          <view class='mall_titLeftCont'>{{item.signature}}</view>
+        </view>
+      </view>
+      <view class='mall_titRight' >进入店铺
+        <image src='/imgs/img/btn_next.png' class='mall_titRight_img'></image>
+      </view>
+    </view>
+    <view class='mallPic' wx:if='{{item.goods.length!=0}}'>
+      <scroll-view class='mall_tab' scroll-x >
+        <view class='mallGoodsbox' wx:for='{{item.goods}}' wx:key='good' wx:for-item='gitem' wx:for-index='gindex'>
+           <image src='{{gitem.image}}' mode='aspectFill' class='mall_tabItem' bindtap='toGoodDet' data-gid='{{gitem.id}}'></image>
+            <view class='mallPrice'>￥{{gitem.sell_price}}</view>
+        </view>
+      </scroll-view>
+    </view>
+      <h1 wx:else class='swGoods'>暂无上架商品</h1>  
+
+  </view>
+</view>
+
+<!-- //商品列表/ -->
+<!-- <view class='goods'>
+  <view class='goods_left'>
+    <block wx:for='{{goodslist}}' wx:key='ind' wx:if='{{index%2==0}}'>
+      <template is='indexList' data="{{...item}}" />
+    </block>
+  </view>
+  <view class='goods_right'>
+    <block wx:for='{{goodslist}}' wx:key='ind' wx:if='{{index%2==1}}'>
+      <template is='indexList' data="{{...item}}" />
+    </block>
+  </view>
+</view> -->
+<!-- //上来加载 -->
+<view class='page-add-data flexca'>
+  <text>{{pageTottomText}}</text>
+</view>

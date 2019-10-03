@@ -1,0 +1,89 @@
+/* pages/mine/userinfo/userinfo.wxss */
+page{
+  background-color: #F7F7F7;
+}
+.flexba {
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+/* 输入列表  */
+.inputs-head{
+  height: 140rpx;
+  padding: 0 24rpx;
+  border-top:1px solid #F7F7F7;
+  background-color: #ffffff;
+  font-size: 30rpx;
+  color: #333333;
+}
+.inputs-box{
+  height: 88rpx;
+  padding: 0 24rpx;
+  border-top:1px solid #F7F7F7;
+  background-color: #ffffff;
+  font-size: 30rpx;
+  color: #333333;
+}
+.inputs-box input{
+  font-size: 26rpx;
+  width: 480rpx;
+  text-align: right;
+}
+.inputs-box .teInput{
+  font-size: 24rpx;
+  color: #666;
+}
+/* 提示信息 */
+.teamwork-message{
+  font-size: 24rpx;
+  color: #999999;
+  padding-left: 24rpx;
+  margin-top: 20rpx;
+}
+.teamwork-message text{
+  color: #ff4342;
+  margin-right: 10rpx;
+}
+/* 提交按钮 */
+.teamwork-btn{
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  color: white;
+  margin: 0 auto;
+  margin-top: 70rpx;
+  border-radius: 8rpx;
+  background: #20A162;
+}
+.arrow {
+width:10rpx;
+height:20rpx;
+margin-left:10rpx;
+
+
+}
+.arrowsss{
+width:10rpx;
+height:20rpx;
+margin-top:15rpx;
+margin-left:21rpx;
+
+}
+.phone{
+  color:#333333;
+}
+.user-rt{
+  width: 11rpx;
+  height: 20rpx;
+}
+.user-pic{
+  width:100rpx;
+height:100rpx;
+border-radius:50%;
+overflow:hidden;
+float:left;
+
+}

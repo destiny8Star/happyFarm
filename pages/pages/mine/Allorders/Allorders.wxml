@@ -1,0 +1,78 @@
+<view>
+  <view class='goods-cotainer'>
+    <!-- 菜单导航 -->
+    <view class="list-box">
+      <block wx:key="goodsList" wx:for="{{goodsList}}" wx:for-index="index">
+        <view class="goods-list" bindtap='goodsSelect' data-index='{{item.id}}'>
+          <view class="goods-list-title {{item.id==curIndex?'active':''}}">{{item.title}}</view>
+        </view>
+      </block>
+    </view>
+    <!-- 内容列表区块 -->
+    <view class='list-content'>
+      <!--全部 -->
+      <!-- <view > -->
+      <!-- wx:for="{{orderpays}}" -->
+      <block wx:key="orderpays" wx:for='{{allorder}}' wx:for-index="main">
+        <view class='only' bindtap='godetail' data-ornum='{{item.order_sn}}'>
+          <view class='content-title'>
+            <view class='flexca'>
+              订单编号： {{item.order_sn}}
+            </view>
+            {{item.order_text}}
+          </view>
+          <!-- data-status='{{orderpays[0].status}}' data-main='{{main}}' data-id='{{item.id}}' bindtap='dillDetail' -->
+          <view class='content-goods'>
+            <view>
+              <view class='message-img-box'>
+                <!-- <view class='message-img'>
+                    <image mode="widthFix" src='{{hpImg}}{{item.store_avatar}}'></image>
+                  </view> -->
+                <scroll-view scroll-x class='scroBox'>
+                  <image mode="widthFix" wx:for='{{item.goods}}' wx:key='gimg' wx:for-item='gitem' src='{{gitem.image}}'></image>
+                </scroll-view>
+              </view>
+              <view class="message-price">实付款：
+                <text class="pricess">￥{{item.total_money}}</text>
+              </view>
+            </view>
+          </view>
+          <!-- <view wx:if='{{item.status==1}}' class='content-btn'>
+              <view class='btn_shopper delete' data-onum='{{item.order_sn}}' data-status='9' data-order_amount="{{item.order_amount}}" catchtap='deleteInto'>删除订单</view>
+            </view> -->
+          <view wx:if='{{item.status==1}}' class='content-btn'>
+            <view class='btn_shopper' data-ornum='{{item.order_sn}}'  data-ormoney="{{item.total_money}}" catchtap='conPay'>继续支付</view>
+            <view class='btn_shopper delete' data-ornum='{{item.order_sn}}'catchtap='deleteInto'>删除订单</view>
+          </view>
+          <view wx:if='{{item.status==3}}' class='content-btn'>
+            <view class='btn_shopper' data-ornum='{{item.order_sn}}' catchtap='confirm' >确认收货</view>
+            <view class='btn_shopper delete' data-ornum='{{item.order_sn}}'  catchtap='trans'>查看物流</view>
+          </view>
+
+          <view wx:if='{{item.status==4}}' class='content-btn'>
+            <view class='btn_shopper' data-ornum='{{item.order_sn}}'  catchtap='trans'>查看物流</view>
+          </view>
+        </view>
+      </block>
+      <!-- </view> -->
+
+
+    </view>
+  </view>
+</view>
+<!-- 缺省页  -->
+<view wx:if="{{allorder.length==0}}" class='clothes-box flexda'>
+  <view class='clothes-no'>
+    <image class='image-full' src='https://s10.mogucdn.com/p2/161213/upload_7b01ig2ih5egggj85l1gd8d38790f_514x260.png' style="width:514rpx;background:transparent no-repeat;background-size:cover;"></image>
+  </view>
+  <view style="text-align:center;">
+    <text style='font-size:30rpx;'>
+      暂时没有相关订单
+    </text>
+  </view>
+</view>
+
+
+<view class='page-add-data flexca'>
+  <text>{{pageTottomText}}</text>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/mine/userinfo/bindingnumber/bindingnumber.wxml-->
+<view class="out">
+  <view>
+    <view class="verify">手机号码验证</view>
+    <!--短信认证  -->
+    <form bindsubmit="formSubmitl">
+      <view class='username' style="margin-top:40rpx;">
+        <view class="user-left">手机号</view>
+        <input name='phone' placeholder-class="place-holder" placeholder='请输入手机号' bindinput='blurPhonel' type="text" />
+      </view>
+      <view class="line"></view>
+      <view class='username'>
+        <view class="user-left">验证码</view>
+        <input style='width:220rpx' maxlength='6' name='nchange' placeholder-class="place-holder" placeholder='请输入验证码' type="text"  />
+        <view class='get-pwd' class='yanzheng'>
+          <view bindtap='yanzhengBtn' class="pwd-text-box flexca  {{getChange?'':'active'}}">
+            <text>{{getText}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="line"></view>
+      <button class='r-l-btn' formType="submit" style="background:#20A162;">绑定</button>
+    </form>
+  </view>
+
+
+</view>

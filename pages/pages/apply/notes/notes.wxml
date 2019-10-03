@@ -1,0 +1,11 @@
+<!--pages/apply/notes/notes.wxml-->
+<import src="/pages/wxParse/wxParse.wxml" />
+<view class="wxParse">
+  <!-- <template is="wxParse" data="{{wxParseData:article.nodes}}" /> -->
+ <view class="rr">
+    {{notes.text}}
+ </view>
+</view>
+<view class="bottom_box">
+  <button class="agree" bindtap='clickagree'>我同意</button>
+</view>

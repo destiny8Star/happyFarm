@@ -1,0 +1,44 @@
+<!--pages/mine/userinfo/userinfo.wxml-->
+<form bindsubmit="teformSubmit">
+  <view class='inputs-head flexba'>
+    <view>
+      <text>头像</text>
+      <text class='f22' style='color:#FF4427;font-size:28rpx;'>*可修改</text>
+    </view>
+    <view class='flexa' bindtap='headImg'>
+      <view class='user-pic'>
+        <image mode='widthFix' class='img-w' src='{{userInfo.avatar}}' style="height:100%;width:100%;"></image>
+      </view>
+ <image class='arrowsss' src='/imgs/img/arrow_.png'></image>
+    </view>
+  </view>
+  <view class="teamwork-container">
+    <!-- 输入列表 -->
+    <view class='teamwork-inputs'>
+      <view class='inputs-box flexba'>
+        <view>
+          <text>昵称</text>
+        </view>
+        <input maxlength='19' name="name" disabled='true'  value="{{userInfo.nickname}}" />
+      </view>
+    </view>
+    <view class="name" style="margin-top:20rpx;">
+      <view class='inputs-box flexba'>
+        <view class="phonenumber">
+        绑定手机号
+        <text class='f22' style='color:#FF4427;font-size:28rpx;'>*可修改</text>
+        </view>
+        <view class="phone" bindtap='phoneInto' wx:if="{{userInfo.phone==null}}">
+          <text>去绑定</text>
+         <image class='arrow' src='/imgs/img/arrow_.png'></image>
+        </view>
+        <view class="phone" bindtap='phoneInto' wx:if="{{userInfo.phone}}">
+          <text>{{userInfo.phone}}</text> </view>
+
+      </view>
+    </view>
+    <button class='teamwork-btn flexca abl' formType="submit">
+      <text>保存</text>
+    </button>
+  </view>
+</form>

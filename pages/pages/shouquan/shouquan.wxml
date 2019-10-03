@@ -1,0 +1,10 @@
+<view class='login'>
+  <image src='/imgs/img/tc_sq.png' mode='aspectFit' class='loginImg' ></image>
+   <view class='login_content'>
+      <h4>绿汇良园</h4>
+      <h5>该程序获得以下授权</h5>
+      <view class='content'>获取您的公开信息（昵称和头像等），以便于您获得更好的体验</view>
+   </view>
+   <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="btn flexja">微信授权登录</button>
+
+</view>

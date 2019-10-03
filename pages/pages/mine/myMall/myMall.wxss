@@ -1,0 +1,141 @@
+/* pages/mine/myMall/myMall.wxss */
+@import '/pages/mall/inmall/inmall.wxss';
+
+.myMall_tit {
+  position: absolute;
+  bottom: -250rpx;
+  left: 0;
+  width: 100%;
+  padding:40rpx 30rpx;
+ background:#fff;
+border-radius:40rpx 40rpx 0px 0px;
+}
+.myMall_titTop{
+align-items:center;
+height:45rpx;
+
+}
+.inMall_titWoct{
+ align-items: center;
+ margin-bottom: 15rpx;
+}
+.myMall_titTopBand{
+  width: 134rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+}
+.myMall_titTopl{
+  font-size: 32rpx;
+  color: #2A2A2A;
+  font-weight: bold;
+}
+.myMall_titTopr{
+  font-size: 20rpx;
+  color: #999999;
+}
+.myMall_titBot{
+  width: 100%;
+  padding:30rpx 14rpx 0
+}
+.myMall_titBot_item{
+  width: 80rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #999
+}
+.myMall_titBot_itemI{
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+}
+/* //提现金额 */
+.myMall_txbox{
+  width: 100%;
+  background: #fff;
+  padding:40rpx 30rpx;
+  margin-top: 270rpx;
+  margin-bottom: 20rpx
+}
+.myMall_conTopr{
+  width: 100rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  color: #999;
+  border: 1rpx solid #999;
+  border-radius:4px;
+}
+.myMall_conbot{
+  width: 100%;
+  margin-top: 50rpx;
+  align-items: center
+}
+.myMall_conbot_item{
+  align-items: center;
+  height: 80rpx;
+}
+.myMall_conbot_itema{
+  font-size: 28rpx;
+  color: #333;
+}
+.myMall_conbot_itemb{
+  font-size: 22rpx;
+  color: #999;
+}
+.line{
+  width: 1rpx;
+  height: 60rpx;
+  background: #DDDDDD
+}
+/* //额的商品库 */
+.myStore{
+  width: 100%;
+  padding:40rpx 30rpx;
+  background: #fff;
+}
+.mall_titRight_img{
+  width: 8rpx;
+  height: 15rpx;
+}
+/* //滑动 */
+.mallPic{
+  width: 100%;
+  height: 240rpx;
+  margin-top: 30rpx;
+}
+.mall_tab{
+  display: inline-block;
+  height: 240rpx;
+  white-space:nowrap;
+}
+.mall_tabItem{
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 8rpx;
+  margin-right: 30rpx;
+  display: inline-block
+}
+
+.mallGoodsbox{
+  position: relative;
+  margin-right: 30rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+    width: 240rpx;
+  height: 240rpx;
+  display: inline-block
+}
+.mallPrice{
+  position: absolute;
+  bottom:0;
+  right: 0;
+  width:100rpx;
+height:30rpx;
+background:rgba(255,255,255,.8);
+border-radius:8px 0px 8px 0px;
+font-size: 22rpx;
+color: #20A162;
+text-align: center;
+line-height: 30rpx
+}

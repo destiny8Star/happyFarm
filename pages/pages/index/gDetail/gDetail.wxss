@@ -1,0 +1,220 @@
+/* pages/index/gDetail/gDetail.wxss */
+/* //轮播图 */
+@import '/pages/mall/mall.wxss';
+.detailBanner{
+  width: 100%;
+  height: 500rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%
+}
+/* //内容 */
+.detailCont{
+  width:100%;
+  padding:40rpx 30rpx;
+}
+.btnJ{
+  width:25rpx;
+  height:20rpx;
+  position:absolute;
+  right:0rpx;
+  bottom:15rpx;
+}
+
+.detailCont_tit{
+  position: relative;
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;
+}
+.isLaunch{
+  display: block
+}
+.detailCont_con{
+  width: 100%;
+    font-size: 30rpx;
+  color: #666;
+  margin:10rpx 0;
+}
+.zyImg{
+  width:50rpx;
+height:28rpx;
+border-radius:4px;
+margin-right: 10rpx;
+}
+.detailCont_price{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #999;
+}
+.detailCont_p{
+  font-size: 30rpx;
+  color: #20A162
+}
+/* //认证 */
+.detailInd{
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1rpx solid #f7f7f7;
+  border-bottom: 20rpx solid #f7f7f7
+}
+.detailInd image{
+   width: 634rpx;
+   height: 30rpx;
+}
+/* 图文介绍 */
+.wocpic{
+  width: 100%;
+  margin-bottom:100rpx;
+}
+.wocpic_tit{
+  width: 100%;
+}
+.store{
+  width:160rpx;
+  height: 74rpx;
+  position: fixed;
+  bottom: 115rpx;
+  right: 20rpx;
+}
+/* //底部 */
+.detBot{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  overflow: auto;
+}
+.detBot_left{
+  width: 240rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  float: left;
+}
+.detBot_home{
+  width: 48rpx;
+  height: 48rpx;
+}
+.detBot_right{
+  overflow: auto;
+  height: 100rpx;
+  background: #20A162;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 100rpx
+}
+.detBot_rightS{
+   overflow: auto;
+  height: 100rpx;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 100rpx 
+}
+.detBot_right_addCar{
+  width: 50%;
+  background:#20A162;
+  float: left;
+}
+.detBot_right_addCar2{
+  width: 100%;
+  background:#20A162;
+  float: left;
+}
+.detBot_right_addShop{
+   width: 50%;
+  background:#EE3F4D;
+  float: right;
+}
+/* 引入的店铺样式修改 */
+.mallBox{
+  border-bottom:20rpx solid #f7f7f7;
+}
+.mall{
+  border-bottom: 0
+}
+/* //展示价格 */
+.showBG{
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.showBox{
+  width: 540rpx;
+  height: 384rpx;
+  background: #f7f7f7;
+  border-radius: 10%;
+  position: fixed;
+  top: -20%;
+  left:0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 50rpx;
+  align-items: center;
+}
+.showBox_tit{
+  font-size: 34rpx;
+  color: #333;
+  font-weight: bold
+}
+.showBox_price{
+  width:100%;
+  padding:0 30rpx;
+  font-size: 28rpx;
+}
+.showBox_pricel{
+  color: #20A162
+}
+.showBox_price2{
+  color: #EE3F4D
+}
+.showInput{
+  width: 478rpx;
+  height: 58rpx;
+  font-size: 26rpx;
+  color: #333;
+  border:1rpx solid#ddd;
+  background: #fff;
+  border-radius:10rpx;
+  padding-left: 20rpx;
+}
+.showBtnbox{
+  width: 100%;
+  height: 90rpx;
+  border-top: 1rpx solid #ddd;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 90rpx;
+}
+.showBtnboxL{
+  width: 50%;
+  height: 100%;
+  color: #999;
+   border-right:1rpx solid #ddd;
+}
+.showBtnboxR{
+  width: 50%;
+  height: 100%;
+  color: #20A162;
+   /* border-left: 0.3rpx solid #09141F; */
+}

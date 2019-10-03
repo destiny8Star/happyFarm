@@ -1,0 +1,51 @@
+<!--pages/mine/refund/refund.wxml-->
+<form bindsubmit="formSubmit">
+<!-- <view class="mainbox">
+  <view class="toptitle">
+    <image src="/imgs/img/icon_circle.png" style="width:20rpx;height:20rpx;"></image>
+    <text class="storename">商品信息</text>
+  </view>
+</view>
+<view class='mallPic'>
+  <scroll-view class='mall_tab' scroll-x>
+    <image src='/imgs/test/food2.jpg' mode='aspectFill' class='mall_tabItem'></image>
+    <image src='/imgs/test/food2.jpg' class='mall_tabItem'></image>
+    <image src='/imgs/test/food2.jpg' class='mall_tabItem'></image>
+    <image src='/imgs/test/food2.jpg' class='mall_tabItem'></image>
+    <image src='/imgs/test/food2.jpg' class='mall_tabItem'></image>
+  </scroll-view>
+</view> -->
+
+<view class="parttwo">
+  <view class="reason_title">退款缘由</view>
+  <view class='inputbox'>
+    <textarea placeholder='请输入您的退款缘由' name="content"></textarea>
+  </view>
+
+  <view class='up-pic'>
+    <view class='flex pic-box'>
+      <block wx:key="imgbox" wx:for="{{imgbox}}">
+        <!-- <view class='ap-box'> -->
+          <view class='add-pic'>
+            <image  src='{{item}}'></image>
+            <view class='img-de' data-deindex='{{index}}' bindtap='imgDelete1'>
+              <image  src='/imgs/img/delete_s.png'></image>
+            </view>
+          </view>
+        <!-- </view> -->
+      </block>
+      <view class='add-pic' bindtap='addPic1' wx:if="{{imgbox.length<3}}">
+        <image src='/imgs/img/add_pic@2x.png' style="width:200rpx;height:200rpx;"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+  <view class='tkmoney flex_be'>
+    <text>退款金额</text>
+    <text>合计：<text class="green">￥{{allInfo.total_money}}</text></text>
+  </view>
+  <button class='submit' formType='submit'>提交</button>
+  </form>

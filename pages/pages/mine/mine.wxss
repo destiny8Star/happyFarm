@@ -1,0 +1,527 @@
+/* pages/mine/mine.wxss */
+
+page {
+  width: 100%;
+  height: auto;
+  background: #f7f7f7;
+}
+
+.topimg {
+  width: 100%;
+  height: 505rpx;
+}
+
+.topimg image {
+  width: 100%;
+  height: 420rpx;
+}
+
+.main {
+  width: 690rpx;
+  margin: 0 auto;
+  /* height:234rpx; */
+  z-index: 4;
+  top: 245rpx;
+  position: absolute;
+  float: left;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 30rpx;
+  /* padding-bottom:39rpx; */
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.user_img {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  margin-top: -185rpx;
+  float: right;
+  margin-left: 460rpx;
+}
+
+.message_box {
+  width: 109rpx;
+  height: 109rpx;
+  margin-left: 535rpx;
+  margin-top: -50rpx;
+}
+
+.tuo {
+  width: 109rpx;
+  height: 109rpx;
+}
+
+.message {
+  width: 47rpx;
+  height: 39rpx;
+  position: absolute;
+  margin-top: 38rpx;
+  margin-left: -39px;
+}
+
+.dot {
+  width: 14rpx;
+  height: 14rpx;
+  background: rgba(241, 17, 6, 1);
+  border: NaNpx solid rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 72rpx;
+  margin-top: -100rpx;
+}
+
+.username {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 40rpx;
+  margin-top: -165rpx;
+  position: absolute;
+  color: #fff;
+  margin-left: 40rpx;
+}
+
+.look {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 22rpx;
+  margin-top: -100rpx;
+  position: absolute;
+  color: #fff;
+  margin-left: 40rpx;
+  margin-right: 10rpx;
+}
+
+.state {
+  width: 690rpx;
+  margin: 0 auto;
+  line-height: 110rpx;
+  margin-top: 185rpx;
+  z-index: 55555;
+  padding-top: 38rpx;
+}
+
+.innerbox {
+  width: 690rpx;
+  margin: 0 auto;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 1rpx solid #f7f7f7;
+  padding-top: 10rpx;
+}
+
+.state_left {
+  width: 50%;
+  float: left;
+  text-align: center;
+  /* border-right:1rpx solid #A5A6AC; */
+  height: 90rpx;
+  /* margin-top: 6rpx; */
+}
+
+.state_center {
+  width: 28%;
+  float: left;
+  text-align: center;
+}
+
+.state_right {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.collect {
+  color: #4c4e5a;
+  font-size: 36rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.number {
+  color: #8d8d8d;
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.line {
+  width: 3rpx;
+  height: 60rpx;
+  background: rgba(165, 166, 172, 1);
+  border-radius: 2rpx;
+  float: left;
+  margin-top: 25rpx;
+}
+
+.press {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+}
+
+progress {
+  margin-top: 156px;
+  margin-left: 28rpx;
+  width: 504rpx;
+  float: left;
+}
+
+.signin {
+  width: 178rpx;
+  height: 46rpx;
+  float: left;
+  line-height: 46rpx;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(0deg, rgba(57, 248, 211, 1) 0%, rgba(67, 234, 126, 1) 100%);
+  border-radius: 23px;
+  margin-top: 140rpx;
+  font-size: 30rpx;
+  margin-left: 255rpx;
+}
+
+.signin_s {
+  width: 178rpx;
+  height: 46rpx;
+  float: left;
+  line-height: 46rpx;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(0deg, rgba(57, 248, 211, 1) 0%, rgba(67, 234, 126, 1) 100%);
+  border-radius: 23px;
+  margin-top: 140rpx;
+  font-size: 30rpx;
+  margin-left: 255rpx;
+}
+
+.yuan {
+  width: 100%;
+  margin: 0 aut;
+  position: absolute;
+  color: #4c4e5a;
+  font-size: 24rpx;
+  margin-top: 330rpx;
+  margin-left: 28rpx;
+}
+
+/* 我的订单 */
+
+/*悬浮框 */
+
+.card-img {
+  width: 72rpx;
+  height: 72rpx;
+  position: fixed;
+  bottom: 38rpx;
+  margin-left: 603rpx;
+}
+
+.outbox {
+  width: 92%;
+  margin: 0 auto;
+  background: #fff;
+  /* padding-bottom: 15rpx; */
+  margin-top: 15rpx;
+}
+
+.navbox {
+  width: 100%;
+  /* height: 150rpx; */
+  margin-top: 30rpx;
+  align-items: center;
+}
+
+.mainw {
+  width: 100%;
+  height: 150rpx;
+}
+
+.navbox image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: 50rpx;
+  margin-bottom: 22rpx;
+}
+
+.onenav {
+  width: 25%;
+  /* height: 120rpx; */
+  font-size: 28rpx;
+  text-align: center;
+  display: table-cell;
+  /* border: 1rpx saddlebrown solid */
+}
+
+.onenav text {
+  display: block;
+  font-size: 24rpx;
+  margin-bottom: 36rpx;
+}
+
+.recently {
+  width: 660rpx;
+  margin: 0 auto;
+  height: 150rpx;
+  background: #f7f7f7;
+  /* padding-bottom: 17rpx; */
+}
+
+.recenttitle {
+  color: #434343;
+  font-size: 24rpx;
+  padding-left: 13rpx;
+  padding-top: 14rpx;
+  padding-bottom: 14rpx;
+}
+
+.xc_img {
+  width: 88rpx;
+  height: 88rpx;
+  margin-left: 15rpx;
+}
+
+.main_left {
+  float: left;
+  color: #434343;
+  font-size: 24rpx;
+  width: 20%;
+}
+
+.main-right {
+  float: left;
+  color: #434343;
+  font-size: 24rpx;
+  width: 80%;
+  height: 25rpx;
+  line-height: 25rpx;
+}
+
+.main_date {
+  width: 440rpx;
+  height: 25rpx;
+  font-size: 26rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(67, 67, 67, 1);
+  float: left;
+}
+
+.main_time {
+  color: #888;
+  font-size: 24rpx;
+  float: right;
+  margin-right: 17rpx;
+}
+
+.details {
+  color: #434343;
+  font-size: 22rpx;
+  max-width: 515rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  float: left;
+  margin-top: 10rpx;
+  line-height: 30rpx;
+}
+
+.my_pin {
+  padding-top: 17px;
+  font-size: 32rpx;
+  color: #434343;
+  width: 100%;
+  margin: 0 auto;
+  /* border-bottom: 1rpx solid #f6f6f6; */
+  height: 75rpx;
+  line-height: 60rpx;
+  float: left;
+}
+
+.my {
+  float: left;
+  font-size: 32rpx;
+  color: #2a2a2a;
+  margin-left: 30rpx;
+}
+
+.more {
+  float: right;
+  font-size: 22rpx;
+  color: #919191;
+  margin-right: 38rpx;
+}
+
+.zanwu {
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  padding-top: 25px;
+}
+
+.partthree {
+  width: 690rpx;
+  margin: 0 auto;
+  margin-top: 45rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.titl {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  padding-left: 30rpx;
+}
+
+.four {
+  width: 690rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 6rpx;
+  padding-bottom: 33rpx;
+}
+
+.apply {
+  width: 199rpx;
+  height: 42rpx;
+  background: rgba(32, 161, 98, 1);
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  line-height: 42rpx;
+  font-size: 24rpx;
+}
+
+.outbox {
+  width: 100%;
+  margin: 0 auto;
+  /* margin-top: 20rpx; */
+  background: #fff;
+  border-radius: 20rpx;
+}
+
+.third-card {
+  margin-top: 30rpx;
+  width: 682rpx;
+  margin: 0 auto;
+  /* height: 355rpx; */
+  background: #fff;
+  border-radius: 8px;
+  /* margin-bottom: 25rpx; */
+}
+
+.flexba {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-right {
+  float: left;
+  width: 454rpx;
+  margin-top: 64rpx;
+}
+
+.name {
+  padding-left: 21rpx;
+  font-size: 28rpx;
+  color: #333;
+  letter-spacing: 0.46rpx;
+  width: 375rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 42rpx;
+}
+
+.arrow {
+  width: 10rpx;
+  height: 18rpx;
+  margin-left: 20rpx;
+  margin-right: 15rpx;
+}
+
+.arrow1 {
+  width: 11rpx;
+  height: 20rpx;
+  margin-left: 20rpx;
+}
+
+.usercode {
+  width: 300rpx;
+  height: 23rpx;
+  font-size: 24rpx;
+  color: #333;
+  margin-left: 20rpx;
+}
+
+.arrow_r {
+  width: 11rpx;
+  height: 20rpx;
+  /* float: right; */
+  margin-left: 10rpx;
+}
+
+.third-card .item {
+  font-size: 28rpx;
+  color: #333;
+  position: relative;
+  border-bottom: 1rpx solid #efefef;
+  height: 120rpx;
+  line-height: 120rpx;
+  padding-left: 33rpx;
+  padding-right: 32rpx;
+}
+
+.third-card .item {
+  font-size: 28rpx;
+  color: #333;
+  position: relative;
+  /* border-bottom: 1rpx solid #EFEFEF; */
+  height: 120rpx;
+  line-height: 120rpx;
+  padding-left: 33rpx;
+  padding-right: 32rpx;
+}
+
+.four-card .item {
+  font-size: 28rpx;
+  color: #333;
+  position: relative;
+  border-bottom: 0;
+  height: 120rpx;
+  line-height: 120rpx;
+  padding-left: 33rpx;
+  padding-right: 32rpx;
+}
+
+.arrow_icon {
+  width: 38rpx;
+  height: 38rpx;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+/* 
+button{
+ border-radius:0;
+} */
+
+.menu_name {
+  color: #a7a7a7;
+}

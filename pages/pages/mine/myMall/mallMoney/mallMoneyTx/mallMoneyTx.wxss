@@ -1,0 +1,150 @@
+/* pages/mine/myMall/mallMoney/mallMoneyTx/mallMoneyTx.wxss */
+page{
+  background: #f7f7f7
+}
+.modalDlg {
+  width: 644rpx;
+  height: 738rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 10% auto;
+  background-color: #fff;
+  border-radius: 36rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30rpx;
+  box-shadow: 0 0 30rpx 10rpx rgba(102,102,102,0.15)
+}
+.model_money{
+  font-size: 38rpx;
+  color: #EE3F4D
+}
+.help{
+  width: 40rpx;
+  height: 40rpx;
+  background: #bbb;
+  font-size: 26rpx;
+  color: #fff;
+  border-radius: 50%;
+  /* text-align: center; */
+  /* line-height: 40rpx; */
+  float: right;
+  justify-content: center;
+  align-items: center;
+}
+.model_title{
+  font-size: 32rpx;
+  color: #333
+}
+.txjine {
+  font-size: 30rpx;
+  color: #c1c1c1;
+   margin:80rpx 0 60rpx
+}
+
+.icon-money {
+  font-family: PingFangSC-Regular;
+  font-size: 37rpx;
+  color: #28292f;
+  text-align: left;
+  float: left;
+}
+
+.yu {
+  width: 100%;
+  font-size: 26rpx;
+  color: #9a9899;
+  margin-top: 37rpx;
+}
+
+.tx {
+  font-size: 37rpx;
+  color: #ff4427;
+  text-align: center;
+  margin-left: 2rpx;
+}
+
+.txtx {
+  font-size: 30rpx;
+  color: #b4b4b4;
+}
+
+.wxtitle {
+  font-size: 28rpx;
+  color: #28292f;
+  margin-top: 42rpx;
+}
+
+.shuru {
+  width: 510rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #efefef;
+}
+
+.surebox {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.close {
+  width: 26rpx;
+  height: 26rpx;
+  float: right;
+}
+
+.tixianbtn {
+  margin-top: 90rpx;
+}
+
+.btn {
+  width: 480rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  background:rgba(108, 223, 167,.4);
+  border-radius: 8rpx;
+}
+ button::after{ border: none; }
+.btn2 {
+  width: 480rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  background:#20A162;
+  border-radius: 8rpx;
+}
+
+.tips {
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 30rpx;
+  color: #b4b4b4;
+  margin-top: 31rpx;
+  text-align: center;
+}
+
+.tips {
+  font-size: 30rpx;
+  text-align: center;
+}
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background:rgba(0,0,0,.4);
+}
+
+.hideImg{
+  width: 561rpx;
+  height: 644rpx;
+  margin: 30% auto;
+display:block;
+
+}

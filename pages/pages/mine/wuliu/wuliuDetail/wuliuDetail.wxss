@@ -1,0 +1,71 @@
+/* pages/mine/wuliu/wuliuDetail/wuliuDetail.wxss */
+.title{
+  width: 100%;
+  border-bottom: 20rpx solid #f7f7f7;
+  border-top: 1rpx solid #f7f7f7
+}
+.titBox{
+  width: 100%;
+  padding:20rpx 30rpx;
+  align-items: center
+}
+.image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+.tit-text{
+  color: #333
+}
+.text1{
+  font-size: 26rpx;
+  margin-bottom: 10rpx
+}
+.text2{
+  font-size: 22rpx;
+}
+
+.content{
+  width: 100%;
+  background: #fff;
+  padding:50rpx 30rpx;
+}
+.itemBox{
+  /* padding-top: 6rpx; */
+  width: 100%;
+  overflow: auto;
+  color: #868686
+}
+.itemL{
+  width: 135rpx;
+  margin-right: 10rpx
+}
+.date{
+  text-align: center;
+  font-size: 22rpx;
+}
+.time{
+  text-align: center;
+  font-size: 18rpx;
+
+}
+.itemR{
+  flex: 1;
+  box-sizing: content-box;
+  padding:0 0 50rpx 20rpx;
+  border-left: 1rpx solid #f0f0f0;
+  font-size: 20rpx;
+  position: relative;
+}
+.cricle{
+  width: 13rpx;
+  height: 13rpx;
+  background: #DDDDDD;
+  border-radius: 50%;
+  position: absolute;
+  top: 0rpx;
+  left: -6rpx;
+}
+.itemBox:last-child>.itemR{
+  border:none
+}

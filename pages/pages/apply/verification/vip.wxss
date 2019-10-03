@@ -1,0 +1,180 @@
+page{
+  background-color: #fff;
+}
+.ccc{
+  border-top:2px solid #14a1fd;
+  border-bottom:2px solid #14a1fd;
+}
+/* .hong-container{
+  margin-bottom: 208rpx;
+}
+picker-view-column{
+  margin: 0 200rpx;
+} */
+.animation-element-addr  picker-view-column{
+  margin: 0 20rpx;
+}
+/* 1头部选照片 */
+.hong-top{
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  
+}
+.hong-top .top-box{
+  height: 180rpx;
+  padding: 0 14rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.hong-top .top-only{
+  width: 25%;
+  padding: 20rpx 10rpx 0;
+  height: 180rpx;
+  box-sizing: border-box;
+}
+.hong-top .only-pic{
+  width: 100%;
+  height: 160rpx;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.hong-top .pic-a{
+  width: 100%;
+  height: 100%;
+  padding: 33rpx;
+  border: 1px dashed #CCC;
+  box-sizing: border-box;
+} 
+.hong-top .pic-b{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+} 
+.hong-top .pic-a,.pic-b{
+  position: absolute;
+  left: 0;
+  top: 0;
+} 
+.hong-top .only-text{
+  font-size: 24rpx;
+  padding-top: 20rpx;
+  text-align: center;
+}
+.hong-top .top-text{
+  height: 20rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}
+.hong-top .top-text>text{
+  color: #ff4273;
+}
+/* 2表单填写 */
+/* 输入列表  */
+.contant-teamwork{
+  background-color: #fff;
+}
+.hong-contant .inputs-box{
+  height: 88rpx;
+  padding: 0 24rpx;
+  border-bottom:1px solid #F7F7F7;
+  background-color: #ffffff;
+  font-size: 30rpx;
+  color: #333333;
+}
+.hong-contant .inputs-box .address{
+  width: 437rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+.hong-contant .inputs-box input{
+  font-size: 26rpx;
+  width: 480rpx;
+  text-align: right;
+}
+.inputs-box image{
+  width:16rpx;
+  height:20rpx;
+  margin-left: 15rpx;
+   /* vertical-align: top; */
+  position: relative;
+  top: 3rpx;
+}
+
+
+/* 提交按钮 */
+.hong-contant .teamwork-btn{
+
+  width: 480rpx;
+  height: 88rpx;
+  border-radius: 50rpx;
+  color: white;
+  background-color:#14a1fd;
+  margin: 0 auto;
+  margin-top: 80rpx;
+  margin-bottom: 40rpx;
+}
+
+.item-box .only-text{
+  font-size: 24rpx;
+  padding-top: 20rpx;
+  text-align: center;
+}
+.item-text{
+  margin-bottom: 30rpx;
+}
+.content-textrea .item-text{
+  text-align: center;
+}
+ .content-textrea .item-box{
+  width: 100%;
+  padding: 20rpx 24rpx;
+  height: 200rpx;
+} 
+ .content-textrea .item-box textarea{
+   background-color: #f7f7f7;
+   width: 100%;
+   height: 100%;
+   padding: 20rpx;
+   box-sizing: border-box;
+   font-size: 28rpx;
+   margin-bottom: 35rpx;
+ }
+  .content-textrea .item-box view{
+   background-color: #f7f7f7;
+   width: 100%;
+   height: 160rpx;
+   padding: 20rpx;
+   box-sizing: border-box;
+   font-size: 28rpx;
+   margin-bottom: 35rpx;
+ }
+ .content-item{
+   margin-bottom: 35rpx;
+ }
+
+
+ 
+  .inputs-box .plase{
+  font-size:26rpx;
+  color: #666;
+} 
+
+.inputs-box .inputext{
+    font-size:26rpx;
+}
+
+.inputs-box .gai{
+  color: #ff4273;
+  margin-left: 10rpx;
+}
+
+ 
+/* //--------------------------------------------------------------------------------------- */

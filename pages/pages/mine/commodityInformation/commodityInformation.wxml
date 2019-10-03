@@ -1,0 +1,27 @@
+<!--pages/mine/commodityInformation/commodityInformation.wxml-->
+<view class="main">
+  <view class="top">
+    <view class="company">
+   <image  wx:if="{{status==1}}" src="/imgs/img/lable_zy.png" class="storetitle"></image>
+      <text class="name">{{store}}</text>
+    </view>
+  </view>
+  <view class="outbox">
+    <view class="listbox" wx:for="{{listbox}}" wx:key="unique">
+      <view class="list">
+        <view class="left">
+          <image src="{{item.img}}" style="width:113rpx;height:128rpx"></image>
+        </view>
+        <view class="right">
+        
+          <view class="title"><image wx:if="{{status==1}}" src="/imgs/img/lable_zy.png" class="storetitle1"></image>{{item.title}}</view>
+          <view class="price">
+            <text class="now_price">￥{{item.price}}</text>
+            <text class="originalprice">￥{{item.oldprice}}</text>
+            <text class="num">X{{item.num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,218 @@
+/* pages/mine/refund/refund.wxss */
+
+/* //滑动 */
+@import '/pages/mall/inmall/inmall.wxss';
+
+page {
+  background: #f7f7f7;
+  width: 100%;
+  margin: 0 auto;
+font-size:28rpx;
+
+}
+
+.mainbox {
+  width: 100%;
+  margin: 0 auto;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  margin-top:1rpx;
+
+}
+
+.toptitle {
+width:690rpx;
+margin:0 auto;
+height:88rpx;
+line-height:88rpx;
+background:#fff;
+border-bottom:1rpx solid #efefef;
+
+}
+
+.storename {
+  color: #333;
+  font-size: 32rpx;
+  margin-left: 21rpx;
+}
+
+/* //滑动 */
+
+.mallPic {
+  width: 100%;
+  height: 160rpx;
+  /* margin-top:30rpx; */
+  padding-left: 30rpx;
+  background: #fff;
+}
+
+.mall_tab {
+  display: inline-block;
+  height: 160rpx;
+  white-space: nowrap;
+  padding-top: 30rpx;
+}
+
+.mall_tabItem {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 8rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+
+/* 退款缘由 */
+.parttwo{
+width:100%;
+margin:0 auto;
+background:#ffffff;
+border-top: 1rpx solid #efefef;
+
+}
+
+.inputbox{
+  width: 100%;
+  /* height: 300rpx; */
+  background: #fff;
+  /* margin-top: 20rpx;
+  padding-top: 40rpx */
+}
+.inputbox textarea{
+width:690rpx;
+height:220rpx;
+box-sizing:border-box;
+padding:31rpx 21rpx;
+color:#333;
+background:#f7f7f7;
+margin:0 auto;
+
+
+}
+
+
+.reason_title{
+  width:100%;
+  padding-left: 30rpx;
+  padding:30rpx;
+
+}
+
+.tkmoney{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  margin-bottom: 120rpx;
+}
+.submit{
+width:100%;
+margin: 0 auto;
+height:98rpx;
+line-height:98rpx;
+background:#20A162;
+color:#fff;
+text-align:center;
+margin-top:30rpx;
+font-size:32rpx;
+position: fixed;
+bottom: 0
+
+
+}
+
+
+.flex{  
+  display: flex;  
+}  
+.up-pic{  
+  /* padding:20rpx 24rpx; */  
+  width: 100%;  
+  justify-content: center; 
+  background:#fff;
+
+  padding-bottom:75rpx;
+ 
+}  
+.pic-box{  
+  margin-top:20rpx;  
+  flex-flow:wrap;  
+   width:95%;   
+}  
+.ap-box{  
+   position: relative;  
+}  
+.add-pic{  
+width:200rpx;
+height:200rpx;
+margin-right:20rpx;
+position:relative;
+}
+.green{
+  color:#20A162;
+  font-size:32rpx;
+}
+.add-pic{  
+width:200rpx;
+height:200rpx;
+margin-right:20rpx;
+position:relative;
+margin:15rpx 10rpx 20rpx 20rpx;
+
+}  
+/* 上传图片 */
+.up-pic{  
+  /* padding:20rpx 24rpx; */  
+  width: 100%;  
+  justify-content: center; 
+  background:#fff;
+
+  padding-bottom:75rpx;
+ 
+}  
+.pic-box{  
+  /* margin-top:20rpx;   */
+  flex-flow:wrap;  
+   width:100%;
+   padding:0 20rpx   
+}  
+.ap-box{  
+   position: relative;  
+}  
+.add-pic{  
+width:200rpx;
+height:200rpx;
+margin-right:20rpx;
+position:relative;
+margin:15rpx 10rpx 20rpx 15rpx;
+
+
+}  
+/* 删除图片 */  
+.img-de{  
+width:35rpx;
+height:35rpx;
+border-radius:50%;
+position:absolute;
+right:-12rpx;
+top:-10rpx;
+z-index: 9
+}  
+/* .hong-contant .teamwork-btn{  
+  width: 360rpx;  
+  height: 88rpx;  
+  border-radius: 50rpx;  
+  color: white;  
+  background-color:#14a1fd;  
+  margin: 0 auto;  
+  margin-top: 80rpx;  
+  margin-bottom: 40rpx;  
+} */
+
+
+button{
+  border-radius: 0
+}

@@ -1,0 +1,13 @@
+<!--pages/cart/fail/fail.wxml-->
+<view class="main">
+
+  <image src="/imgs/img/fail.png"></image>
+
+  <view class="title">订单支付失败</view>
+  <view class="price">￥1388.0</view>
+  <view class="statu">请重新支付</view>
+  <view class="btn_box">
+    <view class="left">查看订单</view>
+    <view class="right">继续支付</view>
+  </view>
+</view>

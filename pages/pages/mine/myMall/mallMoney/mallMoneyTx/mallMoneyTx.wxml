@@ -1,0 +1,36 @@
+<!--pages/mine/myMall/mallMoney/mallMoneyTx/mallMoneyTx.wxml-->
+<form bindsubmit='tx'>
+<!-- 提现模态框开始 -->
+<view class="modalDlg">
+    <view style="margin:0 auto;margin-left:60rpx;">
+      <view class="model_title">可提现金额（元）
+        <text class="model_money">2000.00</text>
+
+        <image src="/imgs/img/wen.png"  bindtap='helpBox' style="width:40rpx;height:40rpx; float: right"></image>
+         <!-- <view class='help' bindtap='helpBox'>？</view> -->
+      </view>
+      <view class="txjine">提现金额</view>
+      <view class="icon-money">¥</view>
+      <view class="shuru">
+        <input style="margin-top:28rpx;margin-left:60rpx;width:300rpx;" name='tmoney' value='{{txmoney}}' placeholder='输入提现金额' type='digit' bindinput='inpVal'></input>
+        <view class="right" style="float:right;margin-top:-75rpx;">
+          <text class="tx" bindtap='allmoney'>全部提现</text>
+        </view>
+      </view>
+      <view class="yu">
+        <text class="txtx">提现到微信零钱</text>
+      </view>
+    </view>
+    <view class="tixianbtn">
+      <button class='btn2' form-type='submit' wx:if='{{okBtn}}'>提现</button>
+       <button class='btn' wx:else>提现</button>
+      <view class="tips">1-5个工作日到账</view>
+    </view>
+  </view>
+<!-- 模态框结束 -->
+</form>
+<!-- 遮罩层 -->
+<view class="mask" bindtap='hideMask' catchtouchmove="preventTouchMove" wx:if="{{helpBox}}">
+   <image src='/imgs/img/tx_sq.png' class='hideImg'></image>
+</view>
+

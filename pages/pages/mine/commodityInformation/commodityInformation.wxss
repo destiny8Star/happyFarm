@@ -1,0 +1,156 @@
+/* pages/mine/commodityInformation/commodityInformation.wxss */
+
+page {
+  border-top: 1rpx solid #efefef;
+  background:#f7f7f7;
+
+}
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+  background: #f7f7f7;
+}
+
+.top {
+ width:100%;
+margin:0 auto;
+height:88rpx;
+background:#fff;
+line-height:88rpx;
+
+}
+
+.storetitle{
+width:50rpx;
+height:30rpx;
+line-height:30rpx;
+background:rgba(32,161,98,1);
+border-radius:4px;
+font-size:18rpx;
+color:#ffffff;
+float:left;
+margin-top:29rpx;
+margin-right:10rpx;
+
+
+
+}
+
+
+.storetitle1{
+width:50rpx;
+height:30rpx;
+line-height:30rpx;
+background:rgba(32,161,98,1);
+border-radius:4px;
+font-size:18rpx;
+color:#ffffff;
+float:left;
+margin-top:5rpx;
+margin-right:10rpx;
+
+}
+
+.company {
+  font-size: 28rpx;
+  color: #999;
+  padding-left: 30rpx;
+}
+
+.ordernumber {
+font-size:28rpx;
+color:#999;
+padding-left:30rpx;
+padding-top:15rpx;
+width:450rpx;
+float:left;
+
+}
+
+.list {
+width:690rpx;
+margin:0 auto;
+height:auto;
+overflow:hidden;
+background:#ffffff;
+padding-top:40rpx;
+padding-bottom:20rpx;
+
+
+
+}
+.name{
+  color:#333333;
+  font-size: 28rpx;
+}
+
+.copy{
+width:120rpx;
+height:40rpx;
+line-height:40rpx;
+background:rgba(255,255,255,1);
+border:1rpx solid rgba(187,187,187,1);
+border-radius:8rpx;
+color:#999999;
+font-size:22rpx;
+float:left;
+text-align:center;
+margin-top: 15rpx;
+margin-left: 145rpx
+
+}
+
+.left {
+  float:left;
+
+}
+.right{
+float: left;
+}
+
+.outbox{
+ width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+}
+.listbox{
+width:690rpx;
+margin:0 auto;
+background:#ffffff;
+border-top:1rpx solid #efefef;
+
+}
+
+.title{
+margin-top:15rpx;
+margin-left:28rpx;
+color:#333333;
+font-size:28rpx;
+margin-bottom:37rpx;
+
+}
+.price{
+    margin-top: 20rpx;
+  margin-left:28rpx;
+   color:#333333;
+  font-size: 28rpx; 
+}
+
+.num{
+  font-size: 22rpx;
+  color:#666666;
+}
+
+.now_price{
+  color:#20A162;
+  font-size: 30rpx;
+  margin-right: 18rpx;
+}
+
+.originalprice{
+  color:#666666;
+  font-size: 22rpx;
+ margin-right:300rpx;
+
+}

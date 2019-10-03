@@ -1,0 +1,61 @@
+<!--pages/mine/myMall/mallMoney/mallGoods/mallGoods.wxml-->
+<block wx:if='{{goodsList.length!=0}}'>
+  <view class='goodBox' wx:for='{{goodsList}}' wx:key="unique">
+    <view class='goodBoxTop flex_be'>
+      <view class='goodBoxTop_img'>
+        <image src='{{item.image}}'></image>
+      </view>
+      <view class='goodBoxTop_r'>
+        <view class='goodBoxTop_rT flex_be'>
+          <view class='goodBoxTop_rTB'>
+            <view class='goodBoxTop_rTBa'>{{item.goods_name}}</view>
+            <view class='goodBoxTop_rTBb'>{{item.introduce}}</view>
+          </view>
+          <view class='goodBoxTop_rTI goodBoxTop_rTI2' wx:if='{{item.status==1}}' bindtap='changStatus' data-gid='{{item.id}}'>下架</view>
+          <view class='goodBoxTop_rTI' wx:if='{{item.status==0}}' bindtap='changStatus' data-gid='{{item.id}}'>上架</view>
+        </view>
+        <view class='goodBoxTop_rB flex_be'>
+          <text>平台价：￥{{item.price}}</text>
+          <text>进货价：￥{{item.stock_price}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='googBoxBot flex'>
+      <text class='googBoxBotA'>我的售价：￥{{item.sell_price}}</text>
+      <text class='googBoxBotB' bindtap='showPrice' wx:if='{{item.status==0}}' data-oldp='{{item.stock_price}}' data-gid='{{item.id}}'>修改</text>
+    </view>
+  </view>
+</block>
+
+<!-- 缺省页 -->
+<block wx:else>
+  <view class="carts-default">
+    <view>
+      <view class='default-img'>
+        <image src='/imgs/img/search_n.png'></image>
+      </view>
+      <text style="color:#999999">请先代理商品哦~</text>
+    </view>
+  </view>
+</block>
+
+
+
+
+<!-- //遮罩 -->
+<view class='mask' wx:if='{{showMask}}'>
+  <form bindsubmit='changePrice'>
+    <view class='maskBox'>
+      <view class='maskBox_tit'>修改价格</view>
+      <input class='maskBox_inp' name='price' placeholder='请输入修改后的价格' placeholder-style='font-size:26rpx;color:#c7c7c7' type='digit'></input>
+      <view class='btnBox flex'>
+        <view class='btnCancel' bindtap='hideMask'>取消</view>
+        <button class='btnSure' form-type='submit'>确定</button>
+      </view>
+    </view>
+  </form>
+</view>
+
+<view class='page-add-data flexca'>
+  <text>{{pageTottomText}}</text>
+</view>

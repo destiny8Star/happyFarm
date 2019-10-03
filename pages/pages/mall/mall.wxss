@@ -1,0 +1,100 @@
+/* pages/mall/mall.wxss */
+@import "/template/pubu/indexList.wxss";
+page{
+  background: #fff;
+}
+.mallBox{
+  width: 100%;
+  padding:0 30rpx
+}
+.mall{
+  width: 100%;
+  padding:30rpx 0;
+  border-bottom: 1rpx solid #efefef
+}
+.mall_tit{
+  width: 100%;
+  align-items: center;
+}
+/* //做测两个 */
+.mall_titLeft{
+
+}
+.mall_pic{
+  width:80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+}
+.mall_titLeftTit{
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.mall_titLeftCont{
+  font-size: 22rpx;
+  color: #999;
+  max-width: 350rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mall_titRight{
+  font-size: 22rpx;
+  color: #333;
+}
+.mall_titRight_img{
+  width: 8rpx;
+  height: 15rpx;
+}
+/* //滑动 */
+.mallPic{
+  width: 100%;
+  height: 240rpx;
+  margin-top: 30rpx;
+}
+.mall_tab{
+  display: inline-block;
+  height: 240rpx;
+  white-space:nowrap;
+}
+
+.mallGoodsbox{
+  position: relative;
+  margin-right: 30rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+    width: 240rpx;
+  height: 240rpx;
+  display: inline-block
+}
+.mall_tabItem{
+
+}
+.mallPrice{
+  position: absolute;
+  bottom:0;
+  right: 0;
+  width:100rpx;
+height:30rpx;
+background:rgba(255,255,255,.8);
+border-radius:8px 0px 8px 0px;
+font-size: 22rpx;
+color: #20A162;
+text-align: center;
+line-height: 30rpx
+}
+.swGoods{
+  text-align: center;
+  width: 100%;
+  margin-top: 30rpx;
+  display: block;
+  color: #666
+}
+.goods{
+  display: flex;
+  justify-content: space-between;
+  padding:20rpx 30rpx 30rpx;
+  width:100%;
+  flex-wrap: wrap;
+  background: #F7F7F7
+}

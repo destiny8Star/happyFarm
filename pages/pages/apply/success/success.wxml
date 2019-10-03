@@ -1,0 +1,7 @@
+<!--pages/apply/success/success.wxml-->
+<view class='sendSucImg'>
+   <image src='/imgs/img/success.png'></image>
+</view>
+<h1>您的申请已成功提交</h1>
+<h4>平台将在在3日内联系您，请保持电话畅通</h4>
+<button class='btn' bindtap='toindex'>知道了，返回首页</button>

@@ -1,0 +1,331 @@
+/**app.wxss**/
+page {
+  font-family: "微软雅黑";  
+}
+
+view{
+box-sizing: border-box;
+}
+image{
+width:100%;
+height: 100%;
+}
+.flex{
+display: flex;
+flex-wrap: wrap;
+}
+.flex_be{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.flex_ar{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-around
+}
+.flex_ros{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: flex-start
+}
+.flex_cl{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column
+}
+
+.flex_clb{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: space-between
+}
+.flex_end{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: flex-end
+}
+
+/* 弹性布局 */
+
+.flex-item{
+	flex: 1;
+}
+.flexb{
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+}
+.flexba{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexw{
+  display: flex;
+ flex-wrap: wrap;
+}
+.flexa{
+  display: flex;
+  align-items: center;
+}
+.flexca{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexcca{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flexda{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-wrap.flex-direction-col{
+	flex-direction: column;
+}
+.flex-wrap.flex-direction-row{
+	flex-direction: row;
+}
+.text_overflow{
+   overflow:hidden; 
+   text-overflow:ellipsis;  
+}
+.text_overflowd{
+   overflow:hidden; 
+   text-overflow:ellipsis; 
+    white-space:nowrap; 
+}
+.image-full{
+  width: 100%;
+  height:100%;
+}
+.img-w{
+  width: 100%;
+}
+.tac{text-align: center;}
+.clear::after{ content: ""; display: block; clear:both; overflow:hidden; height:0;}
+.fl{ float:left;}
+.fr{ float:right;}
+.abs{ position:absolute;}
+.rel{ position:relative;}
+.indent{text-indent: 2em;}
+.tac{text-align: center;}
+.blod{ font-weight: 700}
+.em{text-indent: 2em；}
+.block{ display: block;word-break:break-all;}
+
+
+ .f36{
+    font-size: 36rpx;
+}
+ .f30{
+    font-size: 30rpx;
+} 
+ .f26{
+    font-size: 26rpx;
+} 
+ .f22{
+    font-size: 22rpx;
+} 
+
+
+/* scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+} */
+/* ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+} */
+/* .f14px{
+    font-size: 14px;
+} */
+
+/* .navigator-hover{
+  background: transparent;
+  opacity: 0.6;
+} */
+/* 专卖布局css */
+/* 商品列表------------------------------------------- */
+/* 商品内容 */
+.among-content{
+/* padding: 0 14rpx; */
+padding-left: 14rpx;
+padding-right: 14rpx;
+display: flex;
+flex-wrap:wrap;
+margin-bottom: 20rpx;
+}
+.cloth-box{
+width:340rpx;
+height: 495rpx;
+margin: 20rpx 11rpx 0;
+overflow: hidden;
+}
+.cloth-img{
+width: 100%;
+height: 270rpx;
+}
+.cloth-img image{
+width: 100%;
+height: 100%;
+}
+.cloth-detail{
+height: 225rpx;  
+padding:12rpx 10rpx 0; 
+box-sizing: border-box;
+background-color: white;
+overflow: hidden;
+}
+.cloth-name{
+/* margin-top: 12rpx; */
+font-size: 23rpx;
+height: 64rpx;
+color: #333333;
+line-height: 32rpx; 
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.cloth-price{
+margin-top: 12rpx;
+font-size: 32rpx;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: #ff3300;
+}
+.cloth-price text:last-child{
+  font-size: 22rpx;
+  color: #999999;
+}
+.cloth-repertory{
+  font-size: 22rpx;
+  color: #999999;
+  margin-top: 12rpx;
+  display: flex;
+  align-items: center;
+}
+.cloth-together{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 12rpx;
+}
+.cloth-pro-box{
+  width: 250rpx;
+  margin-left: 20rpx;
+}
+progress{
+  width: 100%;
+}
+.cloth-shop{
+width: 100rpx;
+height: 40rpx;
+}
+.cloth-shop image{
+width: 100%;
+height: 100%;
+}
+/* 4内容列表展示 ************/
+.shops-list{
+  width: 100%;
+  height:925rpx;
+  background-color: white;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.img-box{
+  width: 100%;
+  height: 450rpx;
+}
+
+.time-box{
+  width: 100%;
+}
+.special-time{
+  width: 360rpx;
+  height:40rpx;
+  margin: 0 auto;
+  background-color:#ff4342;
+  border-radius: 25rpx;
+  position: relative;
+  top:-20rpx;
+  font-size: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.special-time text{
+  margin-left: 10rpx;
+}
+.special-time text:last-child{
+  width: 170rpx;
+}
+
+.detail-title{
+  margin-top: 15rpx;
+  font-size: 26rpx;
+  color:#ff4342;
+  padding-left: 16rpx;
+}
+.detail-content{
+  font-size: 22rpx;
+  padding: 0 24rpx;
+  line-height: 32rpx;
+}
+.detail-content>view{
+  margin-top: 35rpx;
+}
+.shop-btn-box{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+}
+/* 进入专场按钮 */
+.shop-btn{
+  width: 200rpx;
+  height: 40rpx;
+  background-color:#ff4342;
+  border-radius: 25rpx;
+  color:white;
+  font-size: 20rpx;
+  position: absolute;
+  top:-60rpx;
+  right: 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clearfix:after { 
+content: ""; 
+display: block; 
+/* height: 0;  */
+clear: both; 
+visibility: hidden; 
+} 
+/*加载 ---------------- */
+.page-add-data{
+  width: 100%;
+  height: 40rpx;
+  color: #666;
+  font-size: 24rpx;
+  padding-bottom: 20rpx;
+}
+
+.scroll-box{
+  width: 100%;
+  height: 100%;
+}

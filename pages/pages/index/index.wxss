@@ -1,0 +1,78 @@
+/**index.wxss**/
+/* 顶部tab */
+@import "/template/pubu/indexList.wxss";
+page{
+  background: #F7F7F7
+}
+.index_tab{
+  width: 100%;
+  height: 88rpx;
+  white-space:nowrap;
+  padding-right: 88rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.indexTab_item{
+  font-size: 26rpx;
+  height: 88rpx;
+  color: #666;
+  line-height: 88rpx;
+  margin: 0 30rpx;
+  /* float:right; */
+  display:inline-block;
+
+}
+.selTab{
+  font-size: 34rpx;
+  color: #20A162;
+  border-bottom: 6rpx solid #20A162;
+  border-radius: 3rpx;
+  
+}
+.indexSearch{
+  width: 88rpx;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+ box-shadow:10rpx -20rpx 50rpx 1rpx #20A162;
+}
+.indexSearch image{
+  width: 32rpx;
+  height: 32rpx
+}
+/* //轮播图 */
+.slide-image{
+  width:560rpx;
+height:280rpx;
+border-radius:20px;
+margin:20rpx 20rpx 0;
+}
+.indexBanner{
+  width: 100%;
+  height: 340rpx;
+  background: #fff;
+  overflow: hidden;
+  padding-top: 10rpx;
+}
+
+.changeSty{
+  margin-top: 10rpx;
+  height: 315rpx;
+  box-shadow: 0 0 20rpx -1rpx #0d3921;
+
+}
+.goods{
+  display: flex;
+  justify-content: space-between;
+  padding:20rpx 30rpx 30rpx;
+  width:100%;
+  flex-wrap: wrap;
+}
+.game{
+  width: 100%;
+  height: 200rpx;
+}
